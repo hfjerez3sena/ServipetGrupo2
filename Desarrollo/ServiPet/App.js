@@ -8,15 +8,15 @@ const Stack = createStackNavigator();
 function HomeScreen() {
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Menus de Peluqueria y Estetica</Text>
+      <Text>Menu de Peluqueria y Estetica</Text>
     </View>
   );
 }
 
-function LogoTitle() {
+function LogoCarrito() {
   return (
     <Image
-      style={{ marginHorizontal: 20, width: 50, height: 50 }}
+      style={{ tintColor: "#fff", marginHorizontal: 20, width: 50, height: 50 }}
       source={require("./app/Componente/imagenes/Icono_Carrito.svg")}
     />
   );
@@ -25,7 +25,7 @@ function LogoTitle() {
 function Menu() {
   return (
     <Image
-      style={{ marginHorizontal: 20, width: 50, height: 50 }}
+      style={{ tintColor: "#fff", marginHorizontal: 20, width: 50, height: 50 }}
       source={require("./app/Componente/imagenes/Icono_Menu.svg")}
     />
   );
@@ -38,12 +38,11 @@ function App() {
           name="Home"
           component={HomeScreen}
           options={{
-            headerRight: (props) => <LogoTitle {...props} />,
             headerLeft: (props) => <Menu {...props} />,
-            headerTitle: "Peluqueria y Estética",
+            headerRight: (props) => <LogoCarrito {...props} />,
+            headerTitle: "Peluquería y Estética",
             headerStyle: {
-              marginHorizontal: "60",
-              backgroundColor: "red",
+              backgroundColor: "#5d4294",
             },
             headerTintColor: "#fff",
           }}
