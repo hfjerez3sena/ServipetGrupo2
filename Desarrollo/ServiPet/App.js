@@ -1,18 +1,35 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import * as React from "react";
+import { StyleSheet, Text, View, Image, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+
+const Stack = createStackNavigator();
 
 function HomeScreen() {
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Home Screen</Text>
+      <Text>Menus de Peluqueria y Estetica</Text>
     </View>
   );
 }
 
-const Stack = createStackNavigator();
+function LogoTitle() {
+  return (
+    <Image
+      style={{ marginHorizontal: 20, width: 50, height: 50 }}
+      source={require("./app/Componente/imagenes/Icono_Carrito.svg")}
+    />
+  );
+}
 
+function Menu() {
+  return (
+    <Image
+      style={{ marginHorizontal: 20, width: 50, height: 50 }}
+      source={require("./app/Componente/imagenes/Icono_Menu.svg")}
+    />
+  );
+}
 function App() {
   return (
     <NavigationContainer>
@@ -21,9 +38,12 @@ function App() {
           name="Home"
           component={HomeScreen}
           options={{
-            title: "Peluqueria y Estética",
+            headerRight: (props) => <LogoTitle {...props} />,
+            headerLeft: (props) => <Menu {...props} />,
+            headerTitle: "Peluqueria y Estética",
             headerStyle: {
-              backgroundColor: "#5d4294",
+              marginHorizontal: "60",
+              backgroundColor: "red",
             },
             headerTintColor: "#fff",
           }}
