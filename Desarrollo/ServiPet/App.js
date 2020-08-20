@@ -2,6 +2,7 @@ import * as React from "react";
 import { StyleSheet, Text, View, Image, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import CorteUñas from "./app/Componente/corteUñas";
 
 const Stack = createStackNavigator();
 
@@ -39,6 +40,7 @@ function App() {
           component={HomeScreen}
           options={{
             headerLeft: (props) => <Menu {...props} />,
+            headerTitleAlign: "center",
             headerRight: (props) => <LogoCarrito {...props} />,
             headerTitle: "Peluquería y Estética",
             headerStyle: {
