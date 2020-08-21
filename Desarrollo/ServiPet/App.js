@@ -8,9 +8,9 @@ const Stack = createStackNavigator();
 
 function HomeScreen() {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Menu de Peluqueria y Estetica</Text>
-    </View>
+    <Stack.Navigator>
+      <Stack.Screen name=" " component={CorteUñas} />
+    </Stack.Navigator>
   );
 }
 
@@ -40,13 +40,13 @@ function App() {
           component={HomeScreen}
           options={{
             headerLeft: (props) => <Menu {...props} />,
-            headerTitleAlign: "center",
             headerRight: (props) => <LogoCarrito {...props} />,
             headerTitle: "Peluquería y Estética",
+            headerTitleAlign: "center",
+            headerTintColor: "#fff",
             headerStyle: {
               backgroundColor: "#5d4294",
             },
-            headerTintColor: "#fff",
           }}
         />
       </Stack.Navigator>
