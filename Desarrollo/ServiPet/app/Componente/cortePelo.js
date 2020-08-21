@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View, Button, Image } from "react-native";
 import { color } from "react-native-reanimated";
 
-export default function CorteUñas() {
+export default function CortePelo() {
   return (
     <View
       style={{
@@ -25,9 +25,10 @@ export default function CorteUñas() {
             color: "#5d4294",
             fontSize: 35,
             fontWeight: "400",
+            justifyContent: "space-evenly",
           }}
         >
-          Corte de uñas
+          Corte de pelo
         </Text>
         <Button title="Agendar Cita" color="#6ac3c8" />
       </h1>

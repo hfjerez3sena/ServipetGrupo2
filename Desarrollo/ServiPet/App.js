@@ -3,14 +3,20 @@ import { StyleSheet, Text, View, Image, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import CorteUñas from "./app/Componente/corteUñas";
+import CortePelo from "./app/Componente/cortePelo";
+import Profilaxis from "./app/Componente/profilaxis";
+import Baño from "./app/Componente/baño";
 
 const Stack = createStackNavigator();
 
 function HomeScreen() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name=" " component={CorteUñas} />
-    </Stack.Navigator>
+    <View>
+      <CorteUñas />
+      <CortePelo />
+      <Profilaxis />
+      <Baño />
+    </View>
   );
 }
 
