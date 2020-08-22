@@ -7,35 +7,33 @@ export default function Profilaxis() {
   return (
     <View
       style={{
+        alignContent: "center",
         flexDirection: "row",
-        height: 200,
+        marginRight: 50,
+        marginLeft: 50,
+        height: 100,
         padding: 5,
-        marginHorizontal: 70,
         justifyContent: "space-between",
       }}
     >
       <h3>
         <Image
-          style={{ tintColor: "#6ac3c8", width: 130, height: 130 }}
+          style={{ tintColor: "#6ac3c8", width: 100, height: 100 }}
           source={require("./imagenes/Icono_Peluqueria.svg")}
         />
       </h3>
       <h1>
         <Text
           style={{
-            marginRight: 50,
             color: "#5d4294",
-            fontSize: 35,
-            fontWeight: "400",
+            fontSize: 14,
+            fontWeight: "bold",
+            justifyContent: "space-evenly",
           }}
         >
           Profilaxis
         </Text>
-        <Button
-          title="Agendar Cita"
-          color="#6ac3c8"
-          onPress={() => Navigation.popToTop()}
-        />
+        <Button title="Agendar Cita" color="#6ac3c8" />
       </h1>
     </View>
   );
