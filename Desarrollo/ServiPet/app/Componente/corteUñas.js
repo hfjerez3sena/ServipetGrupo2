@@ -6,34 +6,30 @@ export default function CorteUñas() {
   return (
     <View
       style={{
-        alignContent: "center",
         flexDirection: "row",
-        marginRight: 50,
-        marginLeft: 50,
         height: 100,
-        padding: 20,
+        padding: 60,
         justifyContent: "space-between",
       }}
     >
-      <h1>
-        <Image
-          style={{ tintColor: "#6ac3c8", width: 100, height: 100 }}
-          source={require("./imagenes/Icono__Uñas.svg")}
-        />
-      </h1>
-      <h1>
+      <Image
+        style={{ tintColor: "#6ac3c8", width: 100, height: 100 }}
+        source={require("./imagenes/Icono__Uñas.svg")}
+      />
+      <View>
         <Text
           style={{
+            marginTop: 10,
+            alignItems: "center",
+            paddingBottom: 15,
             color: "#5d4294",
-            fontSize: 14,
-            fontWeight: "bold",
-            justifyContent: "space-evenly",
+            fontSize: 25,
           }}
         >
           Corte de uñas
         </Text>
         <Button title="Agendar Cita" color="#6ac3c8" />
-      </h1>
+      </View>
     </View>
   );
 }
