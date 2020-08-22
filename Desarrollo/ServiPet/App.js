@@ -1,19 +1,42 @@
 import * as React from "react";
-import { StyleSheet, Text, View, Image, Button } from "react-native";
+import { StyleSheet, Text, View, Image, Button} from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Laboratorio from "./app/Componente/laboratorio";
 import Ecografia from "./app/Componente/ecografia"
 import RayosX from "./app/Componente/rayos_x"
 import Cirugia from "./app/Componente/cirugia"
+import { Card, Avatar, Title, Paragraph} from 'react-native-paper';
+import LineaDivisoria from "./app/Componente/linea_divisora"
+
+const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
 
 function HomeComponent() {
   return (
     <View>
-      <Laboratorio />
-      <Ecografia />
-      <RayosX />
-      <Cirugia />
+      <Card
+      style={{
+        flexDirection: "row",
+        height: "height",
+        margin: 20,
+        alignSelf:'center',
+        justifyContent: "center",
+        borderRadius: 20
+      }}
+      elevation={10}
+      
+      >
+        
+      <Card.Content>
+        <Laboratorio />
+        <LineaDivisoria />
+        <Ecografia />
+        <LineaDivisoria />
+        <RayosX />
+        <LineaDivisoria />
+        <Cirugia />
+      </Card.Content>
+    </Card>
     </View>
   );
 }

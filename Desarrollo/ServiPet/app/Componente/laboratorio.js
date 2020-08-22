@@ -26,7 +26,7 @@ export default function Laboratorio() {
             fontWeight: "400",
           }}
         >Laboratorio</Text>
-        <Button title="Agendar cita" color="#6ac3c8" />
+        <Button style={{ borderRadius: 10,}} title="Agendar cita" color="#6ac3c8" />
       </h1>
     </View>
   );
