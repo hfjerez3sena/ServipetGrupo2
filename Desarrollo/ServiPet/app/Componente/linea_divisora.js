@@ -5,7 +5,7 @@ export default function LineaDivisora() {
   return (
     <View
     style={{
-        borderBottomColor: 'black',
+        borderBottomColor: '#D8D0CF',
         borderBottomWidth: 1,
       }}
     />

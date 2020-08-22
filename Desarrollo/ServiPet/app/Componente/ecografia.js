@@ -6,28 +6,23 @@ export default function Ecografia() {
     <View
       style={{
         flexDirection: "row",
-        height: 200,
-        padding: 5,
-        marginHorizontal: 70,
-        justifyContent: "center",
-      }}
-    >
-      <h3>
+        height: "justifyContent",
+        margin: 20,
+        justifyContent: "space-evenly",
+      }}>
         <Image
           style={{ tintColor: "#6ac3c8", width: 130, height: 130 }}
           source={require("./imagenes/Icono__Ultrasonido.svg")}
         />
-      </h3>
-      <h1>
+      <View style={{
+        justifyContent: "space-evenly",}}>
         <Text
           style={{
             color: "#5d4294",
             fontSize: 35,
-            fontWeight: "400",
-          }}
-        >Ecografía</Text>
-        <Button title="Agendar cita" color="#6ac3c8" />
-      </h1>
+          }}>Ecografía</Text>
+        <Button title="Agendar cita" color="#6ac3c8"/>
+        </View>
     </View>
   );
 }

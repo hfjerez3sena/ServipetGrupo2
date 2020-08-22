@@ -20,11 +20,10 @@ function HomeComponent() {
         height: "height",
         margin: 20,
         alignSelf:'center',
-        justifyContent: "center",
-        borderRadius: 20
+        borderRadius: 20,
+        justifyContent: "space-evenly",
       }}
       elevation={10}
-      
       >
         
       <Card.Content>
@@ -32,12 +31,12 @@ function HomeComponent() {
         <LineaDivisoria />
         <Ecografia />
         <LineaDivisoria />
-        <RayosX />
+        <RayosX  />
         <LineaDivisoria />
         <Cirugia />
       </Card.Content>
     </Card>
-    </View>
+    </View>//03103165830
   );
 }
 
