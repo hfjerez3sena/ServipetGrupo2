@@ -11,16 +11,16 @@ export default function Baño() {
         marginRight: 50,
         marginLeft: 50,
         height: 100,
-        padding: 5,
+        padding: 20,
         justifyContent: "space-between",
       }}
     >
-      <h3>
+      <h1>
         <Image
           style={{ tintColor: "#6ac3c8", width: 100, height: 100 }}
-          source={require("./imagenes/Icono_Peluqueria.svg")}
+          source={require("./imagenes/Icono__Baño.svg")}
         />
-      </h3>
+      </h1>
       <h1>
         <Text
           style={{
