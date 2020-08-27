@@ -21,7 +21,7 @@ export default function RayosX() {
             color: "#5d4294",
             fontSize: 35,
           }}>Rayos X</Text>
-        <Button title="Agendar cita" color="#6ac3c8"/>
+        <Button title="Agendar cita" color="#6ac3c8" onPress={() => {console.log("Rayos X")}}/>
         </View>
     </View>
   );

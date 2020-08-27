@@ -21,7 +21,7 @@ export default function Ecografia() {
             color: "#5d4294",
             fontSize: 35,
           }}>Ecografía</Text>
-        <Button title="Agendar cita" color="#6ac3c8"/>
+        <Button title="Agendar cita" color="#6ac3c8" onPress={() => {console.log("Ecografia")}}/>
         </View>
     </View>
   );

@@ -25,6 +25,7 @@
     "react-native-material-ripple": "^0.9.1",
     "react-native-paper": "^4.0.1",
     "react-native-reanimated": "^1.13.0",
+    "react-native-root-toast": "^3.2.1",
     "react-native-safe-area-context": "^3.1.6",
     "react-native-screens": "^2.10.1",
     "react-native-touchable-scale": "https://github.com/kohver/react-native-touchable-scale",

@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, Button, Image } from "react-native";
+import { Text, View, Button, Image, StyleSheet, ToastAndroid } from "react-native";
 
 export default function Laboratorio() {
   return (
@@ -9,6 +9,7 @@ export default function Laboratorio() {
         height: "justifyContent",
         margin: 20,
         justifyContent: "space-evenly",
+        alignSelf:'baseline'
       }}>
         <Image
           style={{ tintColor: "#6ac3c8", width: 130, height: 130 }}
@@ -21,8 +22,10 @@ export default function Laboratorio() {
             color: "#5d4294",
             fontSize: 35,
           }}>Laboratorio</Text>
-        <Button title="Agendar cita" color="#6ac3c8"/>
+        <Button title="Agendar cita" color="#6ac3c8" onPress={() => {console.log("Laboratorio")}}/>
         </View>
     </View>
   );
 }
+
+        
