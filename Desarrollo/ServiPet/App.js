@@ -1,13 +1,11 @@
 import * as React from "react";
-import { Image} from "react-native";
+import { Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import HomeView from "./app/Componente/generic_view"
+import Consulta_View from "./app/Componente/consulta_View";
 
 function HomeComponent() {
-  return (
-    <HomeView/>
-  );
+  return <Consulta_View />;
 }
 
 function LogoCarrito() {
@@ -31,17 +29,16 @@ function Menu() {
 const Stack = createStackNavigator();
 
 function App() {
-
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Root">
-      <Stack.Screen
+        <Stack.Screen
           name="Home"
           component={HomeComponent}
           options={{
             headerLeft: (props) => <Menu {...props} />,
             headerRight: (props) => <LogoCarrito {...props} />,
-            headerTitle: "Cínica veterinaria",
+            headerTitle: "Consulta Veterinaria",
             headerTitleAlign: "center",
             headerTintColor: "#fff",
             headerStyle: {
