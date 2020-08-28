@@ -1,11 +1,16 @@
 import React from "react";
 import { View } from "react-native";
 
-export default function LineaDivisora() {
+export default function LineaDivisora(props) {
+  const { mostrarLinea } = props
+  var colorLine = "#00000000"
+  if(mostrarLinea == true){
+    colorLine = "#D8D0CF"
+  }
   return (
     <View
     style={{
-        borderBottomColor: '#D8D0CF',
+        borderBottomColor: colorLine,
         borderBottomWidth: 1,
       }}
     />

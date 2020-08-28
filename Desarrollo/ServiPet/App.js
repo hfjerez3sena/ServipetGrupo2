@@ -1,19 +1,12 @@
 import * as React from "react";
-import { StyleSheet, Text, View, Image, Button} from "react-native";
+import { Image} from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import Laboratorio from "./app/Componente/laboratorio";
-import Ecografia from "./app/Componente/ecografia"
-import RayosX from "./app/Componente/rayos_x"
-//import Cirugia from "./app/Componente/cirugia"
-import { Card, Avatar, Title, Paragraph} from 'react-native-paper';
-import LineaDivisoria from "./app/Componente/linea_divisora"
 import HomeView from "./app/Componente/generic_view"
 
 function HomeComponent() {
   return (
     <HomeView/>
-    //03103165830
   );
 }
 
@@ -38,12 +31,6 @@ function Menu() {
 const Stack = createStackNavigator();
 
 function App() {
-
-  var cars = [
-    {nombre: "Elsa Bastilla", edad: "30", telefono: "3123556234"},
-    {nombre: "Brayan Calderon", edad: "25", telefono: "3024611064"},
-    {nombre: "Andres Bastilla", edad: "20", telefono: "3103191276"},
-  ]
 
   return (
     <NavigationContainer>

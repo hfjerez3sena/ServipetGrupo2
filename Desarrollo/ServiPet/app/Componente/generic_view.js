@@ -1,27 +1,23 @@
-//import React from "react"
 import * as React from "react";
-import GenericItemView from "./generic_item"
-import Laboratorio from "./laboratorio";
-import Ecografia from "./ecografia"
-import RayosX from "./rayos_x"
-import Cirugia from "./cirugia"
+import GenericItemView from "./generic_item";
 import { Card } from 'react-native-paper';
-import LineaDivisoria from "./linea_divisora"
 import { View } from "react-native";
 
-export default function genericView(/*props*/){
-    //const {usuario, clickBoton} = props;
+export default function genericView(){
     var itemsView = [
-        {itemImage: "./imagenes/Icono__Laboratorio.svg", itemTitle: "Laboratorio", buttonName: "Agendar cita"},
-        {itemImage: "./imagenes/Icono__Ultrasonido.svg", itemTitle: "Ecografía", buttonName: "Agendar cita"},
-        {itemImage: "./imagenes/Icono__RX.svg", itemTitle: "Rayos X", buttonName: "Agendar cita"},
-        {itemImage: "./imagenes/Icono__Cirujano.svg", itemTitle: "Cirugías", buttonName: "Agendar cita"},
+        {itemImage: require("./imagenes/Icono__Laboratorio.svg"), itemTitle: "Laboratorio", buttonName: "Agendar cita", colorBoton: "#6ac3c8", mostrarLinea: true},
+        {itemImage: require("./imagenes/Icono__Ultrasonido.svg"), itemTitle: "Ecografía", buttonName: "Agendar cita", colorBoton: "#6ac3c8", mostrarLinea: true},
+        {itemImage: require("./imagenes/Icono__RX.svg"), itemTitle: "Rayos X", buttonName: "Agendar cita", colorBoton: "#6ac3c8", mostrarLinea: true},
+        {itemImage: require("./imagenes/Icono__Cirujano.svg"), itemTitle: "Cirugías", buttonName: "Agendar cita", colorBoton: "#6ac3c8", mostrarLinea: false},
       ]
 
-    function logArrayElements(element, index, array) {
-        console.log("a[" + index + "] = " + element.itemTitle + " View - Fabian");
-        <Cirugia />
-    }
+    const clickBoton=(name)=>{
+      console.log("Click desde botón genérico");//Hay que identificar el boton que fue clickeado
+    };
+
+    let items = itemsView.map((genericItem)=>
+      <GenericItemView informationObject={genericItem} clickBoton={clickBoton}/>
+    )
 
     return (
         <View>
@@ -37,24 +33,9 @@ export default function genericView(/*props*/){
       elevation={10}
       >
       <Card.Content>
-        <Laboratorio />
-        <LineaDivisoria />
-        <Ecografia />
-        <LineaDivisoria />
-        <RayosX  />
-        <LineaDivisoria />
-        <Cirugia />
-        <script>
-            ${itemsView.forEach(logArrayElements)}
-        </script>
-
+        {items}
       </Card.Content>
     </Card>
     </View>
     );
 }
-
-function asda(){}
-function myFunction(item, index) {
-    //document.getElementById("status").innerHTML += index + ":" + item + "<br>"; 
-  }
