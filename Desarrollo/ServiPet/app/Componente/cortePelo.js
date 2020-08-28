@@ -19,6 +19,8 @@ export default function CortePelo() {
       <View>
         <Text
           style={{
+            width: 160,
+            textAlign: "center",
             marginTop: 10,
             alignItems: "center",
             paddingBottom: 15,
