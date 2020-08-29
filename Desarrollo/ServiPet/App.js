@@ -1,22 +1,54 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from "react";
+import { Image } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import Clinica_View from "./app/Componente/clinica_View";
 
-export default function App() {
+function HomeComponent() {
+  return <Clinica_View />;
+}
+
+function LogoCarrito() {
   return (
-    <View style={styles.container}>
-      <Text>Hola ServiPet</Text>
-      <Text>Texto dos agregado</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Image
+      style={{ tintColor: "#fff", marginHorizontal: 20, width: 50, height: 50 }}
+      source={require("./app/Componente/imagenes/Icono_Carrito.svg")}
+    />
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+function Menu() {
+  return (
+    <Image
+      style={{ tintColor: "#fff", marginHorizontal: 20, width: 50, height: 50 }}
+      source={require("./app/Componente/imagenes/Icono_Menu.svg")}
+    />
+  );
+}
+
+const Stack = createStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Root">
+        <Stack.Screen
+          name="Home"
+          component={HomeComponent}
+          options={{
+            headerLeft: (props) => <Menu {...props} />,
+            headerRight: (props) => <LogoCarrito {...props} />,
+            headerTitle: "Clinica Veterinaria",
+            headerTitleAlign: "center",
+            headerTintColor: "#fff",
+            headerStyle: {
+              backgroundColor: "#5d4294",
+            },
+          }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
