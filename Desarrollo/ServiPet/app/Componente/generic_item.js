@@ -10,7 +10,6 @@ export default function GenericItem(props){
         <View
         style={{
             flexDirection: "row",
-            height: "justifyContent",
             margin: 20,
             justifyContent: "space-evenly"
         }}>
