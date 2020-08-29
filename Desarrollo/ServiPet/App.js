@@ -2,10 +2,10 @@ import * as React from "react";
 import { Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import Consulta_View from "./app/Componente/consulta_View";
+import Clinica_View from "./app/Componente/clinica_View";
 
 function HomeComponent() {
-  return <Consulta_View />;
+  return <Clinica_View />;
 }
 
 function LogoCarrito() {
@@ -38,7 +38,7 @@ function App() {
           options={{
             headerLeft: (props) => <Menu {...props} />,
             headerRight: (props) => <LogoCarrito {...props} />,
-            headerTitle: "Consulta Veterinaria",
+            headerTitle: "Clinica Veterinaria",
             headerTitleAlign: "center",
             headerTintColor: "#fff",
             headerStyle: {

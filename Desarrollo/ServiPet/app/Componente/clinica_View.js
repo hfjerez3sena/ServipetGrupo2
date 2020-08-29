@@ -3,39 +3,32 @@ import GenericItemView from "./generic_item";
 import { Card } from "react-native-paper";
 import { View } from "react-native";
 
-export default function consulta_View() {
+export default function clinica_View() {
   var itemsView = [
     {
-      itemImage: require("./imagenes/Icono__Control.svg"),
-      itemTitle: "Control",
+      itemImage: require("./imagenes/Icono__Laboratorio.svg"),
+      itemTitle: "Laboratorio",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("./imagenes/Icono__Crecimiento.svg"),
-      itemTitle: "Crecimiento y Desarrollo",
+      itemImage: require("./imagenes/Icono__Ultrasonido.svg"),
+      itemTitle: "Ecografía",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("./imagenes/Icono__Vacunación.svg"),
-      itemTitle: "Vacunación",
+      itemImage: require("./imagenes/Icono__RX.svg"),
+      itemTitle: "Rayos X",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("./imagenes/Icono__Desparasitación.svg"),
-      itemTitle: "Desparasitación",
-      buttonName: "Agendar cita",
-      colorBoton: "#6ac3c8",
-      mostrarLinea: true,
-    },
-    {
-      itemImage: require("./imagenes/Icono__VetEnCasa.svg"),
-      itemTitle: "Veterinario en Casa",
+      itemImage: require("./imagenes/Icono__Cirugías.svg"),
+      itemTitle: "Cirugías",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: false,
@@ -45,19 +38,16 @@ export default function consulta_View() {
   const clickBoton = (name) => {
     console.log("Click desde botón genérico"); //Hay que identificar el boton que fue clickeado
     switch (name) {
-      case "Control":
+      case "Laboratorio":
         console.log("Boton: " + name);
         break;
-      case "Crecimiento y Desarrollo":
+      case "Ecografía":
         console.log("Boton: " + name);
         break;
-      case "Vacunación":
+      case "Rayos X":
         console.log("Boton: " + name);
         break;
-      case "Desparacitación":
-        console.log("Boton: " + name);
-        break;
-      case "Veterinario en Casa":
+      case "Cirugías":
         console.log("Boton: " + name);
         break;
     }

@@ -5,7 +5,7 @@ import LineaDivisoria from "./linea_divisora";
 export default function GenericItem(props) {
   const { informationObject, clickBoton } = props;
   const {
-    itemImage = require("./imagenes/Icono__VetEnCasa.svg"),
+    itemImage = require("./imagenes/Icono__Laboratorio.svg"),
     itemTitle = "Titulo",
     buttonName = "Boton",
     colorBoton = "red",
