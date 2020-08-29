@@ -3,9 +3,11 @@ import { Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Clinica_View from "./app/Componente/clinica_View";
+import Consulta_View from "./app/Componente/consulta_View";
+import Consulta_Esp_View from "./app/Componente/consulta_Esp_View";
 
 function HomeComponent() {
-  return <Clinica_View />;
+  return <Consulta_Esp_View />;
 }
 
 function LogoCarrito() {
