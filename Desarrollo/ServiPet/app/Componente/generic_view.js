@@ -29,7 +29,6 @@ export default function genericView(){
             console.log("Boton: "+name);
           break;
       }
-      //console.log("Boton: "+name);
     };
 
     let items = itemsView.map((genericItem)=>

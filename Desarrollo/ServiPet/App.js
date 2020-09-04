@@ -1,12 +1,14 @@
 import * as React from "react";
-import { Image} from "react-native";
+import { Image, View} from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import HomeView from "./app/Componente/generic_view"
+import GenericView from "./app/Componente/generic_view"
+import IndexView from "./app/Componente/index"
 
 function HomeComponent() {
   return (
-    <HomeView/>
+      <IndexView/>
+      //<GenericView/>
   );
 }
 
