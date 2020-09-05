@@ -5,12 +5,14 @@ import { createStackNavigator } from "@react-navigation/stack";
 import GenericView from "./app/Componente/generic_view"
 import IndexView from "./app/Componente/index"
 import Urgencias from "./app/Componente/urgencias"
+import SplashScreen from "./app/Componente/splash_screen"
 
 function HomeComponent() {
   return (
       //<IndexView/>
       //<GenericView/>
-      <Urgencias/>
+      //<Urgencias/>
+      <SplashScreen/>
   );
 }
 
