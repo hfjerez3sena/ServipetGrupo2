@@ -12,7 +12,7 @@ export default function IndexView() {
         { subTitulo: 'Barrio:', inputTextId:'consul_spec' }
     ]; 
 
-    let vista = itemsView.map((item)=> <UrgenciasElements informationObject={item} clickBoton={clickBoton} titulo="Brayan Fabian" imagen={require("./imagenes/Icono__Ambuulancia.svg")} botonName="Calderon Boton"/>)
+    let vista = itemsView.map((item)=> <UrgenciasElements informationObject={item}/>)
 
     const clickBoton=(name)=>{
         console.log("Boton: "+name+" CLICK POR IMPLEMENTAR");

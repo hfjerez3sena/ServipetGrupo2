@@ -1,9 +1,8 @@
 import * as React from "react"
-import { View, Button, Image, Text, TextInput, StyleSheet, ColorValue } from "react-native";
-import LineaDivisoria from "./linea_divisora"
+import { View, Text, TextInput, StyleSheet } from "react-native";
 
 export default function UrgenciasElement(props){
-    const {informationObject, clickBoton} = props
+    const {informationObject} = props
     const { subTitulo = 'Consulta especialista', inputTextId = 'consul_spec' } = informationObject
     return (
         <View>
@@ -25,7 +24,6 @@ const styles = StyleSheet.create({
         borderColor: '#D8D0CF', 
         borderWidth: 1,
         borderRadius: 10,
-        width: 250,
         paddingStart: 10,
 
     }
