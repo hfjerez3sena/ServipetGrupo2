@@ -55,7 +55,7 @@ function App() {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen
           name="Home"
-          component={IndexComponent}
+          component={AgendarComponent}
           options={{
             headerLeft: (props) => <Menu {...props} />,
             headerRight: (props) => <LogoCarrito {...props} />,
