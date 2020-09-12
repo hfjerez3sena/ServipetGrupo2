@@ -16,13 +16,11 @@ export default function GenericItem(props) {
       <View
         style={{
           flexDirection: "row",
-          height: "justifyContent",
-          margin: 20,
-          justifyContent: "space-evenly",
+          margin: "auto",
         }}
       >
         <Image
-          style={{ tintColor: "#6ac3c8", width: 130, height: 130 }}
+          style={{ tintColor: "#6ac3c8", width: 100, height: 100 }}
           source={itemImage}
         />
         <View
@@ -32,11 +30,10 @@ export default function GenericItem(props) {
         >
           <Text
             style={{
-              alignItems: "center",
               color: "#5d4294",
-              fontSize: 35,
-              width: 250,
-              textAlign: "center",
+              fontSize: 30,
+              width: 150,
+              textAlign: "right",
             }}
           >
             {informationObject.itemTitle}

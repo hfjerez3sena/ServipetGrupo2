@@ -53,9 +53,8 @@ export default function guarderia_View() {
       <Card
         style={{
           flexDirection: "row",
-          height: "height",
           margin: 20,
-          alignSelf: "center",
+          alignContent: "center",
           borderRadius: 20,
           justifyContent: "space-evenly",
         }}
