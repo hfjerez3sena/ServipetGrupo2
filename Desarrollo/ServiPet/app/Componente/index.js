@@ -3,7 +3,10 @@ import FlatListIndex from "./flat_list"
 import { Card } from 'react-native-paper';
 import { View } from "react-native";
 
-export default function IndexView() {
+export default function IndexView(props) {
+
+  const { navigation } = props
+
     const itemsView = React.useState([
         { name: 'Urgencias', image: require("./imagenes/Icono__Urgencias.svg"), code: 'red', clickId:'urgencias'},
         { name: 'Peluqueria y estética', image: require("./imagenes/Icono__Peluqueria.svg"), code: '#5d4294', clickId:'pelu_estet' },
@@ -15,7 +18,7 @@ export default function IndexView() {
     const clickBoton=(name)=>{
         switch (name) {
             case "urgencias":
-              console.log("Boton: "+name+" CLICK POR IMPLEMENTAR");
+              navigation.navigate('URGENCIAS')
             break;
             
             case "pelu_estet":
@@ -32,6 +35,7 @@ export default function IndexView() {
             
             case "cli_vet":
               console.log("Boton: "+name+" CLICK POR IMPLEMENTAR");
+              navigation.navigate('CLINICA VETERINARIA')
             break;
             
             case "guarderia":

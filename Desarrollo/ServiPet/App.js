@@ -1,18 +1,31 @@
 import * as React from "react";
-import { Image, View} from "react-native";
+import { Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import Clinica_View from "./app/Componente/clinica_View";
 import GenericView from "./app/Componente/generic_view"
-import IndexView from "./app/Componente/index"
+import Index from "./app/Componente/index"
 import Urgencias from "./app/Componente/urgencias"
-import SplashScreen from "./app/Componente/splash_screen"
+import AgendarView from "./app/Componente/agendar_generic_view"
 
-function HomeComponent() {
+function IndexComponent({ navigation }) {
   return (
-      //<IndexView/>
-      //<GenericView/>
-      //<Urgencias/>
-      <SplashScreen/>
+    <Index navigation={navigation}/>
+  );
+}
+function ClinicaComponent({ navigation }) {
+  return (
+    <Clinica_View navigation={navigation}/>
+  );
+}
+function UrgenciasComponent() {
+  return (
+    <Urgencias />
+  );
+}
+function AgendarComponent({ navigation }) {
+  return (
+    <AgendarView navigation={navigation}/>
   );
 }
 
@@ -37,17 +50,16 @@ function Menu() {
 const Stack = createStackNavigator();
 
 function App() {
-
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Root">
-      <Stack.Screen
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen
           name="Home"
-          component={HomeComponent}
+          component={IndexComponent}
           options={{
             headerLeft: (props) => <Menu {...props} />,
             headerRight: (props) => <LogoCarrito {...props} />,
-            headerTitle: "Clínica veterinaria",
+            headerTitle: "Clinica Veterinaria",
             headerTitleAlign: "center",
             headerTintColor: "#fff",
             headerStyle: {
@@ -55,6 +67,8 @@ function App() {
             },
           }}
         />
+        <Stack.Screen name="URGENCIAS" component={UrgenciasComponent}/>
+        <Stack.Screen name="CLINICA VETERINARIA" component={ClinicaComponent}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
