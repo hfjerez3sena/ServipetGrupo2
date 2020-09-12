@@ -1,46 +1,10 @@
 import * as React from "react";
-import GenericItemView from "./generic_item";
 import { Card } from "react-native-paper";
-import { View, Button, Text, StyleSheet, Image, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from "react-native";
 
 export default function AgendarGeneric(props) {
 
   const { navigation } = props
-
-  var itemsView = [
-    {
-      itemImage: require("./imagenes/Icono__Laboratorio.svg"),
-      itemTitle: "Laboratorio",
-      buttonName: "Agendar cita",
-      colorBoton: "#6ac3c8",
-      mostrarLinea: true,
-    },
-    {
-      itemImage: require("./imagenes/Icono__Ultrasonido.svg"),
-      itemTitle: "Ecografía",
-      buttonName: "Agendar cita",
-      colorBoton: "#6ac3c8",
-      mostrarLinea: true,
-    },
-    {
-      itemImage: require("./imagenes/Icono__RX.svg"),
-      itemTitle: "Rayos X",
-      buttonName: "Agendar cita",
-      colorBoton: "#6ac3c8",
-      mostrarLinea: true,
-    },
-    {
-      itemImage: require("./imagenes/Icono__Cirugías.svg"),
-      itemTitle: "Cirugías",
-      buttonName: "Agendar cita",
-      colorBoton: "#6ac3c8",
-      mostrarLinea: false,
-    },
-  ];
-
-  let items = itemsView.map((genericItem) => (
-    <GenericItemView informationObject={genericItem} clickBoton={clickBoton} />
-  ));
 
   const AppButton = ({ onPress, title }) => (//Creación de un estilo de boton
     <TouchableOpacity onPress={onPress} style={styles.appButtonContainer}>
@@ -49,7 +13,7 @@ export default function AgendarGeneric(props) {
   );
 
   const clickBoton=(name)=>{
-    console.log("Boton: "+name+" CLICK POR IMPLEMENTAR");
+    console.log("Boton: "+name+" CLICK: Agendar Genérico");
   };
 
   return (

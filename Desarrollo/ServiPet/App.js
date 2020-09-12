@@ -7,6 +7,7 @@ import GenericView from "./app/Componente/generic_view"
 import Index from "./app/Componente/index"
 import Urgencias from "./app/Componente/urgencias"
 import AgendarView from "./app/Componente/agendar_generic_view"
+import AgregarMascotaFormulario from "./app/Componente/agregar_mascota_formulario"
 
 function IndexComponent({ navigation }) {
   return (
@@ -27,6 +28,12 @@ function AgendarComponent({ navigation }) {
   return (
     <AgendarView navigation={navigation}/>
   );
+}
+
+function AgregarMascota({navigation}){
+  return (
+    <AgregarMascotaFormulario navigation={navigation}/>
+  )
 }
 
 function LogoCarrito() {
@@ -55,7 +62,7 @@ function App() {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen
           name="Home"
-          component={AgendarComponent}
+          component={IndexComponent}
           options={{
             headerLeft: (props) => <Menu {...props} />,
             headerRight: (props) => <LogoCarrito {...props} />,
