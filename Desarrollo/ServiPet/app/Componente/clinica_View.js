@@ -3,7 +3,10 @@ import GenericItemView from "./generic_item";
 import { Card } from "react-native-paper";
 import { View } from "react-native";
 
-export default function clinica_View() {
+export default function clinica_View(props) {
+
+  const { navigation } = props
+
   var itemsView = [
     {
       itemImage: require("./imagenes/Icono__Laboratorio.svg"),
@@ -63,7 +66,6 @@ export default function clinica_View() {
       <Card
         style={{
           flexDirection: "row",
-          height: "height",
           margin: 20,
           alignSelf: "center",
           borderRadius: 20,
