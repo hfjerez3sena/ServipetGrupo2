@@ -9,6 +9,9 @@ import Index from "./app/Componente/index";
 import Urgencias from "./app/Componente/urgencias";
 import AgendarView from "./app/Componente/agendar_generic_view";
 import Peluqueria_View from "./app/Componente/peluqueria_View";
+import LogoCar from "./app/Componente/imagenes/Icono_Carrito.svg";
+import Menu from "./app/Componente/imagenes/Icono_Menu.svg";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 function IndexComponent({ navigation }) {
   return <Index navigation={navigation} />;
@@ -26,49 +29,36 @@ function AgendarComponent({ navigation }) {
   return <AgendarView navigation={navigation} />;
 }
 
-function LogoCarrito() {
-  return (
-    <Image
-      style={{ tintColor: "#fff", marginHorizontal: 10, width: 50, height: 50 }}
-      source={require("./app/Componente/imagenes/Icono_Carrito.svg")}
-    />
-  );
-}
-
-function Menu() {
-  return (
-    <Image
-      style={{ tintColor: "#fff", marginHorizontal: 10, width: 50, height: 50 }}
-      source={require("./app/Componente/imagenes/Icono_Menu.svg")}
-    />
-  );
-}
-
 const Stack = createStackNavigator();
 
 function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen
-          name="Home"
-          component={IndexComponent}
-          options={{
-            headerLeft: () => <Menu />,
-            headerRight: () => <LogoCarrito />,
-            headerTitle: "Clinica",
-            headerTitleAlign: "center",
-            headerTintColor: "#fff",
-            headerStyle: {
-              backgroundColor: "#5d4294",
-            },
-          }}
-        />
-        <Stack.Screen name="URGENCIAS" component={UrgenciasComponent} />
-        <Stack.Screen name="CLINICA VETERINARIA" component={ClinicaComponent} />
-        <Stack.Screen name="PELUQUERIA" component={PeluqueriaComponent} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen
+            name="Home"
+            component={IndexComponent}
+            options={{
+              headerLeft: () => <Menu color="white" width={120} height={40} />,
+              headerRight: () => <LogoCar width={120} height={40}></LogoCar>,
+              headerTitle: "SERVIPET",
+              headerTitleAlign: "center",
+              headerStyle: {
+                backgroundColor: "#6ac3c8",
+              },
+              headerTitleStyle: { color: "white" },
+            }}
+          />
+          <Stack.Screen name="URGENCIAS" component={UrgenciasComponent} />
+          <Stack.Screen
+            name="CLINICA VETERINARIA"
+            component={ClinicaComponent}
+          />
+          <Stack.Screen name="PELUQUERIA" component={PeluqueriaComponent} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 }
 

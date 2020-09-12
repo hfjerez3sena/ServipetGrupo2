@@ -20,10 +20,7 @@ export default function GenericItem(props) {
           justifyContent: "space-evenly",
         }}
       >
-        <Image
-          style={{ tintColor: "#6ac3c8", width: 100, height: 100 }}
-          source={itemImage}
-        />
+        <Image style={{ width: 100, height: 100 }} source={itemImage} />
         <View
           style={{
             justifyContent: "space-evenly",

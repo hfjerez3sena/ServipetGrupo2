@@ -2,6 +2,12 @@ import React from "react";
 import FlatListIndex from "./flat_list";
 import { Card } from "react-native-paper";
 import { View } from "react-native";
+import Urgencias from "./imagenes/Icono__Urgencias.svg";
+import PeluyEste from "./imagenes/Icono__Peluqueria.svg";
+import ConsuVete from "./imagenes/Icono__Consulta.svg";
+import ConsuEspe from "./imagenes/Icono__Especialista.svg";
+import CliniVete from "./imagenes/Icono__Clinica.svg";
+import Guarde from "./imagenes/Icono__Guardería-11.svg";
 
 export default function IndexView(props) {
   const { navigation } = props;
@@ -9,37 +15,37 @@ export default function IndexView(props) {
   const itemsView = React.useState([
     {
       name: "Urgencias",
-      image: require("./imagenes/Icono__Urgencias.svg"),
+      image: <Urgencias style={{ width: "90%", height: "80%" }} />,
       code: "red",
       clickId: "urgencias",
     },
     {
-      name: "Peluqueria y estética",
-      image: require("./imagenes/Icono__Peluqueria.svg"),
+      name: "Peluqueria y Estética",
+      image: <PeluyEste style={{ width: "90%", height: "80%" }} />,
       code: "#5d4294",
       clickId: "pelu_estet",
     },
     {
       name: "Consulta Veterinaria",
-      image: require("./imagenes/Icono__Consulta.svg"),
+      image: <ConsuVete style={{ width: "90%", height: "80%" }} />,
       code: "#5d4294",
       clickId: "consul_vet",
     },
     {
-      name: "Consulta especialista",
-      image: require("./imagenes/Icono__Especialista.svg"),
+      name: "Consulta Especialista",
+      image: <ConsuEspe style={{ width: "90%", height: "80%" }} />,
       code: "#5d4294",
       clickId: "consul_spec",
     },
     {
-      name: "Clínica veterinaria",
-      image: require("./imagenes/Icono__Clinica.svg"),
+      name: "Clínica Veterinaria",
+      image: <CliniVete style={{ width: "90%", height: "80%" }} />,
       code: "#5d4294",
       clickId: "cli_vet",
     },
     {
       name: "Guarderia",
-      image: require("./imagenes/Icono__Guardería-11.svg"),
+      image: <Guarde style={{ width: "90%", height: "80%" }} />,
       code: "#5d4294",
       clickId: "guarderia",
     },
