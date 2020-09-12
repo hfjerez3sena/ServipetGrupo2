@@ -1,26 +1,26 @@
 import * as React from "react";
-import { styleSheet, View, Text, Image, Dimension } from "react-native";
-import { flatGrid } from "react-native-super-grid";
+import { StyleSheet, View, Text, Image, Dimensions } from "react-native";
+import { FlatGrid } from "react-native-super-grid";
 
 export default function FlatListIndex(props) {
-  const { informationObject, clickboton } = props;
+  const { informationObject, clickBoton } = props;
   const [elementos] = informationObject;
 
   return (
-    <flatGrid
-      itemDimnsion={130}
+    <FlatGrid
+      itemDimension={130}
       data={elementos}
-      style={style.gridView}
+      style={styles.gridView}
       staticDimension={300}
-      spacing0={10}
+      spacing={10}
       renderItem={({ item }) => (
         <View
           style={([styles.itemContainer], [styles.itemContainer])}
           onStartShouldSetResponder={() => {
-            clickboton(item.clickId);
+            clickBoton(item.clickId);
           }}
         >
-          <image style={{ width: "90%", height: "80%" }} source={item.image} />
+          <Image style={{ width: "90%", height: "80%" }} source={item.image} />
 
           <Text
             style={{
@@ -40,12 +40,11 @@ export default function FlatListIndex(props) {
     />
   );
 }
-
-const styles = styleSheet.create({
+const styles = StyleSheet.create({
   gridView: {
     marginTop: 10,
     flex: 1,
-    alingSelf: "center",
+    alignSelf: "center",
   },
   itemContainer: {
     justifyContent: "flex-end",

@@ -16,7 +16,8 @@ export default function GenericItem(props) {
       <View
         style={{
           flexDirection: "row",
-          margin: "auto",
+          margin: 20,
+          justifyContent: "space-evenly",
         }}
       >
         <Image

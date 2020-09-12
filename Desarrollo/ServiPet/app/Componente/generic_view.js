@@ -36,7 +36,23 @@ export default function genericView() {
   ];
 
   const clickBoton = (name) => {
-    console.log("Click desde botón genérico"); //Hay que identificar el boton que fue clickeado
+    switch (name) {
+      case "Laboratorio":
+        console.log("Boton: " + name);
+        break;
+
+      case "Ecografía":
+        console.log("Boton: " + name);
+        break;
+
+      case "Rayos X":
+        console.log("Boton: " + name);
+        break;
+
+      case "Cirugías":
+        console.log("Boton: " + name);
+        break;
+    }
   };
 
   let items = itemsView.map((genericItem) => (
@@ -49,8 +65,9 @@ export default function genericView() {
         style={{
           flexDirection: "row",
           margin: 20,
-          alignSelf: "right",
+          alignSelf: "center",
           borderRadius: 20,
+          justifyContent: "space-evenly",
         }}
         elevation={10}
       >

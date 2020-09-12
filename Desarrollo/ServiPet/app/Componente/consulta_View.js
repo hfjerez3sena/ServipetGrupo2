@@ -73,7 +73,6 @@ export default function consulta_View() {
       <Card
         style={{
           flexDirection: "row",
-          height: "height",
           margin: 20,
           alignSelf: "center",
           borderRadius: 20,

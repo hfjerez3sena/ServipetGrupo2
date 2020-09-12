@@ -4,13 +4,22 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import GeneriView from "./app/Componente/generic_view";
 import Clinica_View from "./app/Componente/clinica_View";
-import Consulta_View from "./app/Componente/consulta_View";
-import Consulta_Esp_View from "./app/Componente/consulta_Esp_View";
-import Guarderia_View from "./app/Componente/guarderia_View";
-import { preventAutoHide } from "expo/build/launch/SplashScreen";
+import GenericView from "./app/Componente/generic_view";
+import Index from "./app/Componente/index";
+import Urgencias from "./app/Componente/urgencias";
+import AgendarView from "./app/Componente/agendar_generic_view";
 
-function HomeComponent() {
-  return <Guarderia_View />;
+function IndexComponent({ navigation }) {
+  return <Index navigation={navigation} />;
+}
+function ClinicaComponent({ navigation }) {
+  return <Clinica_View navigation={navigation} />;
+}
+function UrgenciasComponent() {
+  return <Urgencias />;
+}
+function AgendarComponent({ navigation }) {
+  return <AgendarView navigation={navigation} />;
 }
 
 function LogoCarrito() {
@@ -36,10 +45,10 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Root">
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen
           name="Home"
-          component={HomeComponent}
+          component={IndexComponent}
           options={{
             headerLeft: () => <Menu />,
             headerRight: () => <LogoCarrito />,
@@ -51,6 +60,8 @@ function App() {
             },
           }}
         />
+        <Stack.Screen name="URGENCIAS" component={UrgenciasComponent} />
+        <Stack.Screen name="CLINICA VETERINARIA" component={ClinicaComponent} />
       </Stack.Navigator>
     </NavigationContainer>
   );
