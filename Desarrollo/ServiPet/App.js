@@ -8,12 +8,16 @@ import GenericView from "./app/Componente/generic_view";
 import Index from "./app/Componente/index";
 import Urgencias from "./app/Componente/urgencias";
 import AgendarView from "./app/Componente/agendar_generic_view";
+import Peluqueria_View from "./app/Componente/peluqueria_View";
 
 function IndexComponent({ navigation }) {
   return <Index navigation={navigation} />;
 }
 function ClinicaComponent({ navigation }) {
   return <Clinica_View navigation={navigation} />;
+}
+function PeluqueriaComponent({ navigation }) {
+  return <Peluqueria_View navigation={navigation} />;
 }
 function UrgenciasComponent() {
   return <Urgencias />;
@@ -62,6 +66,7 @@ function App() {
         />
         <Stack.Screen name="URGENCIAS" component={UrgenciasComponent} />
         <Stack.Screen name="CLINICA VETERINARIA" component={ClinicaComponent} />
+        <Stack.Screen name="PELUQUERIA" component={PeluqueriaComponent} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -3,34 +3,34 @@ import GenericItemView from "./generic_item";
 import { Card } from "react-native-paper";
 import { View } from "react-native";
 
-export default function clinica_View(props) {
+export default function peluqueria_View(props) {
   const { navigation } = props;
 
   var itemsView = [
     {
-      itemImage: require("./imagenes/Icono__Laboratorio.svg"),
-      itemTitle: "Laboratorio",
+      itemImage: require("./imagenes/Icono__Uñas.svg"),
+      itemTitle: "Corte de Uñas",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("./imagenes/Icono__Ultrasonido.svg"),
-      itemTitle: "Ecografía",
+      itemImage: require("./imagenes/Icono__Pelo.svg"),
+      itemTitle: "Corte de Pelo",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("./imagenes/Icono__RX.svg"),
-      itemTitle: "Rayos X",
+      itemImage: require("./imagenes/Icono__Profilaxis.svg"),
+      itemTitle: "Profilaxis",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("./imagenes/Icono__Cirugías.svg"),
-      itemTitle: "Cirugías",
+      itemImage: require("./imagenes/Icono__Baño.svg"),
+      itemTitle: "Baño",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: false,
@@ -40,16 +40,16 @@ export default function clinica_View(props) {
   const clickBoton = (name) => {
     console.log("Click desde botón genérico"); //Hay que identificar el boton que fue clickeado
     switch (name) {
-      case "Laboratorio":
+      case "Corte de Uñas":
         console.log("Boton: " + name);
         break;
-      case "Ecografía":
+      case "Corte de Pelo":
         console.log("Boton: " + name);
         break;
-      case "Rayos X":
+      case "Profilaxis":
         console.log("Boton: " + name);
         break;
-      case "Cirugías":
+      case "Baño":
         console.log("Boton: " + name);
         break;
     }
