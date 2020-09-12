@@ -20,7 +20,7 @@ export default function FlatListIndex(props) {
                       source={item.image} />
                       
                 <Text style={{ 
-                  width : '100%', height : '20%', fontSize : 16, color : item.code, textAlign : 'center', 
+                  width : '100%', height : '30%', fontSize : 16, color : item.code, textAlign : 'center', 
                   textShadowColor : '#fafafa', fontWeight : '600' }} >{item.name}</Text>
                 </View>
             )}
