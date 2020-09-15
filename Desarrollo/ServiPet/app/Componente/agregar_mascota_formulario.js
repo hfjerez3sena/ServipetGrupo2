@@ -2,7 +2,7 @@ import GenericItemView from "./generic_item";
 import { Card } from "react-native-paper";
 import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from "react-native";
 import { RadioButton } from 'react-native-paper';
-import CheckBox from '@react-native-community/checkbox';
+//import CheckBox from '@react-native-community/checkbox';
 import React, { useState } from 'react';
 import BotonGenerico from "./genericButton"
 

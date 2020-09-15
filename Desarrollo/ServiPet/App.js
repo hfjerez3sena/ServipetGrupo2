@@ -57,25 +57,28 @@ function Menu() {
 const Stack = createStackNavigator();
 
 function App() {
+
+  const headerBar = {
+    headerLeft: (props) => <Menu {...props} />,
+    headerRight: (props) => <LogoCarrito {...props} />,
+    headerTitle: "Clinica Veterinaria",
+    headerTitleAlign: "center",
+    headerTintColor: "#fff",
+    headerStyle: {
+      backgroundColor: "#5d4294",
+    },
+  }
+
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen
-          name="Home"
-          component={IndexComponent}
-          options={{
-            headerLeft: (props) => <Menu {...props} />,
-            headerRight: (props) => <LogoCarrito {...props} />,
-            headerTitle: "Clinica Veterinaria",
-            headerTitleAlign: "center",
-            headerTintColor: "#fff",
-            headerStyle: {
-              backgroundColor: "#5d4294",
-            },
-          }}
-        />
-        <Stack.Screen name="URGENCIAS" component={UrgenciasComponent}/>
-        <Stack.Screen name="CLINICA VETERINARIA" component={ClinicaComponent}/>
+        <Stack.Screen name="Home" component={IndexComponent} options={headerBar} />
+        <Stack.Screen name="URGENCIAS" component={UrgenciasComponent} options={headerBar} />
+        <Stack.Screen name="CLINICA VETERINARIA" component={ClinicaComponent} options={headerBar} />
+      
+        <Stack.Screen name="nombreGenerico" component={ClinicaComponent} options={headerBar} />
+        
+        
       </Stack.Navigator>
     </NavigationContainer>
   );
