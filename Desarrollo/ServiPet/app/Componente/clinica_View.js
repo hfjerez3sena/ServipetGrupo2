@@ -34,7 +34,6 @@ export default function clinica_View() {
       mostrarLinea: false,
     },
   ];
-
   const clickBoton = (name) => {
     console.log("Click desde botón genérico"); //Hay que identificar el boton que fue clickeado
     switch (name) {
@@ -57,7 +56,6 @@ export default function clinica_View() {
   let items = itemsView.map((genericItem) => (
     <GenericItemView informationObject={genericItem} clickBoton={clickBoton} />
   ));
-
   return (
     <View>
       <Card
