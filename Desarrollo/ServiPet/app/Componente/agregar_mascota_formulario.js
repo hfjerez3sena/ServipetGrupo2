@@ -1,5 +1,5 @@
 import { Card, RadioButton } from "react-native-paper";
-import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity, LogBox } from "react-native";
+import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from "react-native";
 import { CheckBox } from 'react-native-elements'
 import React, { useState } from 'react';
 import BotonGenerico from "./genericButton"
@@ -7,7 +7,6 @@ import BotonGenerico from "./genericButton"
 export default function AgregarMascotaFormulario(props) {
 
   const { navigation } = props
-  const [checked, setChecked] = React.useState('firs');
   const [checkedTipoMascota, cambiarTipoMascota] = React.useState('perro');
   const [checkedGenero, cambiarGenero] = React.useState('hembra');
   const [checkedEdad, cambiarEdad] = React.useState('cachorro');
@@ -119,10 +118,6 @@ export default function AgregarMascotaFormulario(props) {
           </View>
 
             <Text style={styles.textViewOne}>Edad:</Text>
-            
-
-
-
             <View style={styles.verticalStyle}>
             <View style={styles.horizontalStyle}>
             <RadioButton
@@ -155,9 +150,6 @@ export default function AgregarMascotaFormulario(props) {
             </View>
             
           </View>
-
-
-
             <Text style={styles.textViewOne}>Caracter:</Text>
             <View style={styles.horizontalStyleOne}>
                 <CheckBox checked={checkOne} onPress={() => changeCheckState(1)} />

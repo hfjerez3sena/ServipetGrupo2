@@ -17,30 +17,17 @@ export default function IndexView(props) {
     ]); 
     const clickBoton=(name)=>{
         switch (name) {
-            case "urgencias":
-              navigation.navigate('URGENCIAS')
-            break;
+            case "urgencias": navigation.navigate('Urgencias'); break;
             
-            case "pelu_estet":
-              console.log("Boton: "+name+" CLICK POR IMPLEMENTAR");
-            break;
+            case "pelu_estet": navigation.navigate('Peluquería y estética'); break;
             
-            case "consul_vet":
-              console.log("Boton: "+name+" CLICK POR IMPLEMENTAR");
-            break;
+            case "consul_vet": navigation.navigate('Consulta Veterinaria'); break;
             
-            case "consul_spec":
-              console.log("Boton: "+name+" CLICK POR IMPLEMENTAR");
-            break;
+            case "consul_spec": navigation.navigate('Consulta especialista'); break;
             
-            case "cli_vet":
-              console.log("Boton: "+name+" CLICK POR IMPLEMENTAR");
-              navigation.navigate('CLINICA VETERINARIA')
-            break;
+            case "cli_vet": navigation.navigate('Clinica veterinaria'); break;
             
-            case "guarderia":
-              console.log("Boton: "+name+" CLICK POR IMPLEMENTAR");
-            break;
+            case "guarderia": navigation.navigate('Guarderia'); break;
         }
       };
     return (
