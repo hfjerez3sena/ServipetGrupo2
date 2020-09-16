@@ -75,10 +75,7 @@ function App() {
         <Stack.Screen name="Home" component={IndexComponent} options={headerBar} />
         <Stack.Screen name="URGENCIAS" component={UrgenciasComponent} options={headerBar} />
         <Stack.Screen name="CLINICA VETERINARIA" component={ClinicaComponent} options={headerBar} />
-      
         <Stack.Screen name="nombreGenerico" component={ClinicaComponent} options={headerBar} />
-        
-        
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,8 +1,6 @@
-import GenericItemView from "./generic_item";
-import { Card } from "react-native-paper";
-import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from "react-native";
-import { RadioButton } from 'react-native-paper';
-//import CheckBox from '@react-native-community/checkbox';
+import { Card, RadioButton } from "react-native-paper";
+import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity, LogBox } from "react-native";
+import { CheckBox } from 'react-native-elements'
 import React, { useState } from 'react';
 import BotonGenerico from "./genericButton"
 
@@ -10,7 +8,49 @@ export default function AgregarMascotaFormulario(props) {
 
   const { navigation } = props
   const [checked, setChecked] = React.useState('firs');
-  const [toggleCheckBox, setToggleCheckBox] = useState(false)
+  const [checkedTipoMascota, cambiarTipoMascota] = React.useState('perro');
+  const [checkedGenero, cambiarGenero] = React.useState('hembra');
+  const [checkedEdad, cambiarEdad] = React.useState('cachorro');
+
+  let [checkOne, setStateCheckOne] = useState(false)
+  let [checkTwo, setStateCheckTwo] = useState(false)
+  let [checkThree, setStateCheckThree] = useState(false)
+  let [checkFour, setStateCheckFour] = useState(false)
+  let [checkFive, setStateCheckFive] = useState(false)
+  let [checkSix, setStateCheckSix] = useState(false)
+  let [checkSeven, setStateCheckSeven] = useState(false)
+
+  const changeCheckState = (index) => {
+    switch (index) {
+      case 1: setStateCheckOne(!checkOne); break;
+      case 2: setStateCheckTwo(!checkTwo); break;
+      case 3: setStateCheckThree(!checkThree); break;
+      case 4: setStateCheckFour(!checkFour); break;
+      case 5: setStateCheckFive(!checkFive); break;
+      case 6: setStateCheckSix(!checkSix); break;
+      case 7: setStateCheckSeven(!checkSeven); break;
+    }
+  }
+
+  let [RadioOne, setStateRadioOne] = useState(true)
+  let [RadioTwo, setStateRadioTwo] = useState(false)
+  let [RadioThree, setStateRadioThree] = useState(false)
+  let [RadioFour, setStateRadioFour] = useState(false)
+  let [RadioFive, setStateRadioFive] = useState(false)
+  let [RadioSix, setStateRadioSix] = useState(false)
+  let [RadioSeven, setStateRadioSeven] = useState(false)
+
+  const changeRadioState = (index) => {
+    switch (index) {
+      case 1: setStateRadioOne(!RadioOne); break;
+      case 2: setStateRadioTwo(!RadioTwo); break;
+      case 3: setStateRadioThree(!RadioThree); break;
+      case 4: setStateRadioFour(!RadioFour); break;
+      case 5: setStateRadioFive(!RadioFive); break;
+      case 6: setStateRadioSix(!RadioSix); break;
+      case 7: setStateRadioSeven(!RadioSeven); break;
+    }
+  }
 
 
   const AppButton = ({ onPress, title }) => (//Creación de un estilo de boton
@@ -22,6 +62,7 @@ export default function AgregarMascotaFormulario(props) {
   const clickBoton=(name)=>{
     console.log("Guardar mascota");
   };
+
 
   const clickRadioDog=(name)=>{
     console.log("Boton: "+name+" Can");
@@ -40,75 +81,115 @@ export default function AgregarMascotaFormulario(props) {
         elevation={10}
       >
         <Card.Content>
-            <View style={styles.horizontalStyle}>
-                <RadioButton status={ checked === 'firs' ? 'checked' : 'unchecked' } onPress={() => clickRadioDog("firs")}/>
-                <Image style={{ width: 50, height: 50 }} source={require("./imagenes/Icono__Peluqueria.svg")}/>
-                <Text>Woof</Text>
-                <RadioButton status={ checked === 'firs' ? 'checked' : 'unchecked' } onPress={() => clickRadioDog("firs")}/>
-                <Image style={{ width: 50, height: 50 }} source={require("./imagenes/Icono__Peluqueria.svg")}/>
-                <Text>Meow</Text>
-            </View>
+          <View style={styles.horizontalStyle}>
+            <RadioButton
+              value="perro"
+              status={ checkedTipoMascota === 'perro' ? 'checked' : 'unchecked' }
+              onPress={() => cambiarTipoMascota('perro')}
+            />
+            <Image style={{ width: 50, height: 50 }} source={require("./imagenes/Icono__Peluqueria.svg")}/>
+            <Text>Woof</Text>
+            <RadioButton
+              value="gato"
+              status={ checkedTipoMascota === 'gato' ? 'checked' : 'unchecked' }
+              onPress={() => cambiarTipoMascota('gato')}
+            />
+            <Image style={{ width: 50, height: 50 }} source={require("./imagenes/Icono__Peluqueria.svg")}/>
+              <Text>Meow</Text>
+          </View>
             <Text style={styles.textViewOne}>Nombre:</Text>
             <TextInput style={styles.inputTextBorder} /> 
             <Text style={styles.textViewOne}>Raza:</Text>
             <TextInput style={styles.inputTextBorder} /> 
             <Text style={styles.textViewOne}>Género:</Text>
-            <View style={styles.horizontalStyleOne}>
-                <RadioButton status={ checked === 'firs' ? 'checked' : 'unchecked' } onPress={() => clickRadioDog("firs")}/>
-                <Text style={{marginStart : 5}}>Hembra</Text>
-                <RadioButton status={ checked === 'firs' ? 'checked' : 'unchecked' } onPress={() => clickRadioDog("firs")}/>
-                <Text style={{marginStart : 5}}>Macho</Text>
-            </View>
+
+          <View style={styles.horizontalStyleOne}>
+            <RadioButton
+              value="hembra"
+              status={ checkedGenero === 'hembra' ? 'checked' : 'unchecked' }
+              onPress={() => cambiarGenero('hembra')}
+            />
+            <Text style={{marginStart : 5}}>Hembra</Text>
+            <RadioButton
+              value="macho"
+              status={ checkedGenero === 'macho' ? 'checked' : 'unchecked' }
+              onPress={() => cambiarGenero('macho')}
+            />
+            <Text style={{marginStart : 5}}>Macho</Text>
+          </View>
+
             <Text style={styles.textViewOne}>Edad:</Text>
+            
+
+
+
             <View style={styles.verticalStyle}>
-                <View style={styles.horizontalStyle}>
-                    <RadioButton status={ checked === 'firs' ? 'checked' : 'unchecked' } onPress={() => clickRadioDog("firs")}/>
-                    <Text style={{marginStart : 5}}>Cachorro</Text>
-                    <Text style={styles.smallText}>(0 a 1 años)</Text>
-                </View>
-                <View style={styles.horizontalStyle}>
-                    <RadioButton status={ checked === 'firs' ? 'checked' : 'unchecked' } onPress={() => clickRadioDog("firs")}/>
-                    <Text style={{marginStart : 5}}>Adulto</Text>
-                    <Text style={styles.smallText}>(Hasta 7 años)</Text>
-                </View>
-                <View style={styles.horizontalStyle}>
-                    <RadioButton status={ checked === 'firs' ? 'checked' : 'unchecked' } onPress={() => clickRadioDog("firs")}/>
-                    <Text style={{marginStart : 5}}>Edad madura</Text>
-                    <Text style={styles.smallText}>(7 años en adelante)</Text>
-                </View>
+            <View style={styles.horizontalStyle}>
+            <RadioButton
+              value="cachorro"
+              status={ checkedEdad === 'cachorro' ? 'checked' : 'unchecked' }
+              onPress={() => cambiarEdad('cachorro')}
+            />
+            <Text style={{marginStart : 5}}>Cachorro</Text>
+            <Text style={styles.smallText}>(0 a 1 años)</Text>
             </View>
+
+            <View style={styles.horizontalStyle}>
+            <RadioButton
+              value="adulto"
+              status={ checkedEdad === 'adulto' ? 'checked' : 'unchecked' }
+              onPress={() => cambiarEdad('adulto')}
+            />
+                <Text style={{marginStart : 5}}>Adulto</Text>
+                <Text style={styles.smallText}>(Hasta 7 años)</Text>
+            </View>
+
+            <View style={styles.horizontalStyle}>
+            <RadioButton
+              value="edad_madura"
+              status={ checkedEdad === 'edad_madura' ? 'checked' : 'unchecked' }
+              onPress={() => cambiarEdad('edad_madura')}
+            />
+                <Text style={{marginStart : 5}}>Edad madura</Text>
+                    <Text style={styles.smallText}>(7 años en adelante)</Text>
+            </View>
+            
+          </View>
+
+
+
             <Text style={styles.textViewOne}>Caracter:</Text>
             <View style={styles.horizontalStyleOne}>
-                <CheckBox disabled={false} value={toggleCheckBox} onValueChange={(newValue) => setToggleCheckBox(newValue)}/>
+                <CheckBox checked={checkOne} onPress={() => changeCheckState(1)} />
                 <Text>No se lleva bien con humanos ni con otros animales</Text>
             </View>
             <View style={styles.horizontalStyleOne}>
-                <CheckBox disabled={false} value={toggleCheckBox} onValueChange={(newValue) => setToggleCheckBox(newValue)}/>
+                <CheckBox checked={checkTwo} onPress={() => changeCheckState(2)}/>
                 <Text>No se lleva bien con otros animales</Text>
             </View>
             
             <View style={styles.horizontalStyleOne}>
-                <CheckBox disabled={false} value={toggleCheckBox} onValueChange={(newValue) => setToggleCheckBox(newValue)}/>
+                <CheckBox checked={checkThree} onPress={() => changeCheckState(3)}/>
                 <Text>Es nervioso, puede actuar de manera impredecible</Text>
             </View>
             
             <View style={styles.horizontalStyleOne}>
-                <CheckBox disabled={false} value={toggleCheckBox} onValueChange={(newValue) => setToggleCheckBox(newValue)}/>
+                <CheckBox checked={checkFour} onPress={() => changeCheckState(4)}/>
                 <Text>Amistoso, convive bien con personas y otros animales</Text>
             </View>
             
             <View style={styles.horizontalStyleOne}>
-                <CheckBox disabled={false} value={toggleCheckBox} onValueChange={(newValue) => setToggleCheckBox(newValue)}/>
+                <CheckBox checked={checkFive} onPress={() => changeCheckState(5)}/>
                 <Text>En entrenamiento, puede actuar de manera impredecible</Text>
             </View>
 
             <View style={styles.horizontalStyleOne}>
-                <CheckBox disabled={false} value={toggleCheckBox} onValueChange={(newValue) => setToggleCheckBox(newValue)}/>
+                <CheckBox checked={checkSix} onPress={() => changeCheckState(6)}/>
                 <Text>Discapacitado, puede ser sordo o ciego</Text>
             </View>
 
             <View style={styles.horizontalStyleOne}>
-                <CheckBox disabled={false} value={toggleCheckBox} onValueChange={(newValue) => setToggleCheckBox(newValue)}/>
+                <CheckBox checked={checkSeven} onPress={() => changeCheckState(7)}/>
                 <Text>Está en tratamiento médico, preguntame</Text>
             </View>
 
