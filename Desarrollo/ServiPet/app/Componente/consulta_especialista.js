@@ -34,17 +34,14 @@ export default function ConsultaEspecialistaView(props) {
   const clickBoton = (name) => {
     console.log("Click desde botón genérico"); //Hay que identificar el boton que fue clickeado
     switch (name) {
-      case "Laboratorio":
-        console.log("Boton: " + name);
+      case "Etólogo":
+        navigation.navigate("Etólogo");
         break;
-      case "Ecografía":
-        console.log("Boton: " + name);
+      case "Nutricionista":
+        navigation.navigate("Nutricionista");
         break;
-      case "Rayos X":
-        console.log("Boton: " + name);
-        break;
-      case "Cirugías":
-        console.log("Boton: " + name);
+      case "Cirujano":
+        navigation.navigate("Cirujano");
         break;
     }
     //console.log("Boton: "+name)

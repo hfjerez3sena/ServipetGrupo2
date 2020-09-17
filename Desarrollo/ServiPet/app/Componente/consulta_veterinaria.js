@@ -2,6 +2,7 @@ import * as React from "react";
 import GenericItemView from "./generic_item";
 import { Card } from "react-native-paper";
 import { View } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
 
 export default function ConsultaVeterinariaView(props) {
 
@@ -34,7 +35,7 @@ export default function ConsultaVeterinariaView(props) {
       itemTitle: "Desparacitación",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
-      mostrarLinea: false,
+      mostrarLinea: true,
     },
     {
       itemImage: require("./imagenes/Icono__Cirugías.svg"),
@@ -46,22 +47,13 @@ export default function ConsultaVeterinariaView(props) {
   ];
 
   const clickBoton = (name) => {
-    console.log("Click desde botón genérico"); //Hay que identificar el boton que fue clickeado
     switch (name) {
-      case "Laboratorio":
-        console.log("Boton: " + name);
-        break;
-      case "Ecografía":
-        console.log("Boton: " + name);
-        break;
-      case "Rayos X":
-        console.log("Boton: " + name);
-        break;
-      case "Cirugías":
-        console.log("Boton: " + name);
-        break;
+      case "Control": navigation.navigate("Control"); break;
+      case "Crecimiento y desarrollo": navigation.navigate("Crecimiento y desarrollo"); break;
+      case "Vacunación": navigation.navigate("Vacunación"); break;
+      case "Desparacitación": navigation.navigate("Desparacitación"); break;
+      case "Veterinario en casa": navigation.navigate("Veterinario en casa"); break;
     }
-    //console.log("Boton: "+name)
   };
 
   let items = itemsView.map((genericItem) => (
@@ -70,6 +62,7 @@ export default function ConsultaVeterinariaView(props) {
 
   return (
     <View>
+      <ScrollView>
       <Card
         style={{
           flexDirection: "row",
@@ -82,6 +75,7 @@ export default function ConsultaVeterinariaView(props) {
       >
         <Card.Content>{items}</Card.Content>
       </Card>
+      </ScrollView>
     </View>
   );
 }

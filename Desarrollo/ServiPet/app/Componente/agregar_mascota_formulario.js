@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from "reac
 import { CheckBox } from 'react-native-elements'
 import React, { useState } from 'react';
 import BotonGenerico from "./genericButton"
+import { ScrollView } from "react-native-gesture-handler";
 
 export default function AgregarMascotaFormulario(props) {
 
@@ -69,6 +70,7 @@ export default function AgregarMascotaFormulario(props) {
 
   return (
     <View>
+      <ScrollView>
       <Card
         style={{
           flexDirection: "row",
@@ -189,6 +191,7 @@ export default function AgregarMascotaFormulario(props) {
 
         </Card.Content>
       </Card>
+      </ScrollView>
     </View>
   );
 }

@@ -32,22 +32,11 @@ export default function GuarderiaView(props) {
   ];
 
   const clickBoton = (name) => {
-    console.log("Click desde botón genérico"); //Hay que identificar el boton que fue clickeado
     switch (name) {
-      case "Laboratorio":
-        console.log("Boton: " + name);
-        break;
-      case "Ecografía":
-        console.log("Boton: " + name);
-        break;
-      case "Rayos X":
-        console.log("Boton: " + name);
-        break;
-      case "Cirugías":
-        console.log("Boton: " + name);
-        break;
+      case "Paseo": navigation.navigate("Paseo"); break;
+      case "Hotel": navigation.navigate("Hotel"); break;
+      case "Guardería": navigation.navigate("Guardería"); break;
     }
-    //console.log("Boton: "+name)
   };
 
   let items = itemsView.map((genericItem) => (

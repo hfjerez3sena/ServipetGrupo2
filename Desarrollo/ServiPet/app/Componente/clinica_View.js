@@ -39,22 +39,12 @@ export default function clinica_View(props) {
   ];
 
   const clickBoton = (name) => {
-    console.log("Click desde botón genérico"); //Hay que identificar el boton que fue clickeado
     switch (name) {
-      case "Laboratorio":
-        console.log("Boton: " + name);
-        break;
-      case "Ecografía":
-        console.log("Boton: " + name);
-        break;
-      case "Rayos X":
-        console.log("Boton: " + name);
-        break;
-      case "Cirugías":
-        console.log("Boton: " + name);
-        break;
+      case "Laboratorio": navigation.navigate("Laboratorio"); break;
+      case "Ecografía": navigation.navigate("Ecografía"); break;
+      case "Rayos X": navigation.navigate("Rayos X"); break;
+      case "Cirugías": navigation.navigate("Cirugías"); break;
     }
-    //console.log("Boton: "+name)
   };
 
   let items = itemsView.map((genericItem) => (
