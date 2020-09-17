@@ -12,7 +12,23 @@ export default function genericView(){
         {itemImage: require("./imagenes/Icono__Cirujano.svg"), itemTitle: "Cirugías", buttonName: "Agendar cita", colorBoton: "#6ac3c8", mostrarLinea: false},
       ]
     const clickBoton=(name)=>{
-      console.log("Click desde botón genérico");//Hay que identificar el boton que fue clickeado
+      switch (name) {
+          case "Laboratorio":
+            console.log("Boton: "+name);
+          break;
+          
+          case "Ecografía":
+            console.log("Boton: "+name);
+          break;
+          
+          case "Rayos X":
+            console.log("Boton: "+name);
+          break;
+          
+          case "Cirugías":
+            console.log("Boton: "+name);
+          break;
+      }
     };
     let items = itemsView.map((genericItem)=>
       <GenericItemView informationObject={genericItem} clickBoton={clickBoton}/>
@@ -22,7 +38,6 @@ export default function genericView(){
       <Card
       style={{
         flexDirection: "row",
-        height: "height",
         margin: 20,
         alignSelf:'center',
         borderRadius: 20,

@@ -3,53 +3,54 @@ import GenericItemView from "./generic_item";
 import { Card } from "react-native-paper";
 import { View } from "react-native";
 
-export default function clinica_View(props) {
+export default function PeluqueriaEsteticaView(props) {
 
   const { navigation } = props
 
   var itemsView = [
     {
       itemImage: require("./imagenes/Icono__Laboratorio.svg"),
-      itemTitle: "Laboratorio",
+      itemTitle: "Corte de Uñas",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
       itemImage: require("./imagenes/Icono__Ultrasonido.svg"),
-      itemTitle: "Ecografía",
+      itemTitle: "Corte de Pelo",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
       itemImage: require("./imagenes/Icono__RX.svg"),
-      itemTitle: "Rayos X",
+      itemTitle: "Profilaxis",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
       itemImage: require("./imagenes/Icono__Cirugías.svg"),
-      itemTitle: "Cirugías",
+      itemTitle: "Baño",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: false,
     },
   ];
+
   const clickBoton = (name) => {
     console.log("Click desde botón genérico"); //Hay que identificar el boton que fue clickeado
     switch (name) {
-      case "Laboratorio":
+      case "Corte de Uñas":
         console.log("Boton: " + name);
         break;
-      case "Ecografía":
+      case "Corte de Pelo":
         console.log("Boton: " + name);
         break;
-      case "Rayos X":
+      case "Profilaxis":
         console.log("Boton: " + name);
         break;
-      case "Cirugías":
+      case "Baño":
         console.log("Boton: " + name);
         break;
     }
@@ -59,6 +60,7 @@ export default function clinica_View(props) {
   let items = itemsView.map((genericItem) => (
     <GenericItemView informationObject={genericItem} clickBoton={clickBoton} />
   ));
+
   return (
     <View>
       <Card

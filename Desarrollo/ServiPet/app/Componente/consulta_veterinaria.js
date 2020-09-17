@@ -3,40 +3,48 @@ import GenericItemView from "./generic_item";
 import { Card } from "react-native-paper";
 import { View } from "react-native";
 
-export default function clinica_View(props) {
+export default function ConsultaVeterinariaView(props) {
 
   const { navigation } = props
 
   var itemsView = [
     {
       itemImage: require("./imagenes/Icono__Laboratorio.svg"),
-      itemTitle: "Laboratorio",
+      itemTitle: "Control",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
       itemImage: require("./imagenes/Icono__Ultrasonido.svg"),
-      itemTitle: "Ecografía",
+      itemTitle: "Crecimiento y desarrollo",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
       itemImage: require("./imagenes/Icono__RX.svg"),
-      itemTitle: "Rayos X",
+      itemTitle: "Vacunación",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
       itemImage: require("./imagenes/Icono__Cirugías.svg"),
-      itemTitle: "Cirugías",
+      itemTitle: "Desparacitación",
+      buttonName: "Agendar cita",
+      colorBoton: "#6ac3c8",
+      mostrarLinea: false,
+    },
+    {
+      itemImage: require("./imagenes/Icono__Cirugías.svg"),
+      itemTitle: "Veterinario en casa",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: false,
     },
   ];
+
   const clickBoton = (name) => {
     console.log("Click desde botón genérico"); //Hay que identificar el boton que fue clickeado
     switch (name) {
@@ -59,6 +67,7 @@ export default function clinica_View(props) {
   let items = itemsView.map((genericItem) => (
     <GenericItemView informationObject={genericItem} clickBoton={clickBoton} />
   ));
+
   return (
     <View>
       <Card

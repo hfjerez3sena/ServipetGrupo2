@@ -15,12 +15,10 @@ export default function GenericItem(props) {
     <View>
       <View
         style={{
-          flexDirection: "row",
-          height: "justifyContent",
-          margin: 20,
-          justifyContent: "space-evenly",
-        }}
-      >
+            flexDirection: "row",
+            margin: 20,
+            justifyContent: "space-evenly"
+        }}>
         <Image
           style={{ tintColor: "#6ac3c8", width: 130, height: 130 }}
           source={itemImage}
