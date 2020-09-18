@@ -1,7 +1,7 @@
 import * as React from "react";
 import GenericItemView from "./generic_item";
 import { Card } from "react-native-paper";
-import { View } from "react-native";
+import { View, ScrollView } from "react-native";
 
 export default function PeluqueriaEsteticaView(props) {
   const { navigation } = props;
@@ -38,22 +38,20 @@ export default function PeluqueriaEsteticaView(props) {
   ];
 
   const clickBoton = (name) => {
-    console.log("Click desde botón genérico"); //Hay que identificar el boton que fue clickeado
     switch (name) {
       case "Corte de Uñas":
-        console.log("Boton: " + name);
+        navigation.navigate("Corte de uñas");
         break;
       case "Corte de Pelo":
-        console.log("Boton: " + name);
+        navigation.navigate("Corte de pelo");
         break;
       case "Profilaxis":
-        console.log("Boton: " + name);
+        navigation.navigate("Profilaxis");
         break;
       case "Baño":
-        console.log("Boton: " + name);
+        navigation.navigate("Baño");
         break;
     }
-    //console.log("Boton: "+name)
   };
 
   let items = itemsView.map((genericItem) => (
@@ -62,18 +60,20 @@ export default function PeluqueriaEsteticaView(props) {
 
   return (
     <View>
-      <Card
-        style={{
-          flexDirection: "row",
-          margin: 20,
-          alignSelf: "center",
-          borderRadius: 20,
-          justifyContent: "space-evenly",
-        }}
-        elevation={10}
-      >
-        <Card.Content>{items}</Card.Content>
-      </Card>
+      <ScrollView>
+        <Card
+          style={{
+            flexDirection: "row",
+            margin: 20,
+            alignSelf: "center",
+            borderRadius: 20,
+            justifyContent: "space-evenly",
+          }}
+          elevation={10}
+        >
+          <Card.Content>{items}</Card.Content>
+        </Card>
+      </ScrollView>
     </View>
   );
 }

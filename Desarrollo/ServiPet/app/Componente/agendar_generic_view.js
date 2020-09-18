@@ -1,13 +1,7 @@
 import * as React from "react";
 import { Card } from "react-native-paper";
-import {
-  View,
-  Text,
-  StyleSheet,
-  Image,
-  TextInput,
-  TouchableOpacity,
-} from "react-native";
+import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
 
 export default function AgendarGeneric(props) {
   const { navigation } = props;
@@ -20,12 +14,13 @@ export default function AgendarGeneric(props) {
     </TouchableOpacity>
   );
 
-  const clickBoton = (name) => {
-    console.log("Boton: " + name + " CLICK: Agendar Genérico");
+  const clickBoton=(name)=>{
+    navigation.navigate("Agregar una mascota")
   };
 
   return (
     <View>
+      <ScrollView>
       <Card
         style={{
           flexDirection: "row",
@@ -130,6 +125,7 @@ export default function AgendarGeneric(props) {
           }
         </Card.Content>
       </Card>
+      </ScrollView>
     </View>
   );
 }

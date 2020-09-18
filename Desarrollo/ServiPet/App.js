@@ -8,10 +8,16 @@ import PeluqueriaEsteticaView from "./app/Componente/peluqueria_estetica";
 import ConsultaVeterinariaView from "./app/Componente/consulta_veterinaria";
 import ConsultaEspecialistaView from "./app/Componente/consulta_especialista";
 import Guarderia from "./app/Componente/guarderia";
+import Login from "./app/Componente/login";
+
 import Index from "./app/Componente/index";
 import Urgencias from "./app/Componente/urgencias";
 import AgendarView from "./app/Componente/agendar_generic_view";
 import AgregarMascotaFormulario from "./app/Componente/agregar_mascota_formulario";
+
+function LoginComponent({ navigation }) {
+  return <Login navigation={navigation} />;
+}
 
 function GuarderiaComponent({ navigation }) {
   return <Guarderia navigation={navigation} />;
@@ -95,12 +101,12 @@ function App() {
         <Stack.Screen
           name="SERVIPET"
           component={IndexComponent}
-          options={headerBarIndex}
+          options={headerBar}
         />
         <Stack.Screen
           name="Urgencias"
           component={UrgenciasComponent}
-          options={headerBarUrgencias}
+          options={headerBar}
         />
         <Stack.Screen
           name="Peluquería y estética"
@@ -125,6 +131,112 @@ function App() {
         <Stack.Screen
           name="Consulta Veterinaria"
           component={ConsultaVeterinariaComponent}
+          options={headerBar}
+        />
+
+        <Stack.Screen
+          name="Corte de uñas"
+          component={AgendarComponent}
+          options={headerBar}
+        />
+        <Stack.Screen
+          name="Corte de pelo"
+          component={AgendarComponent}
+          options={headerBar}
+        />
+        <Stack.Screen
+          name="Profilaxis"
+          component={AgendarComponent}
+          options={headerBar}
+        />
+        <Stack.Screen
+          name="Baño"
+          component={AgendarComponent}
+          options={headerBar}
+        />
+
+        <Stack.Screen
+          name="Control"
+          component={AgendarComponent}
+          options={headerBar}
+        />
+        <Stack.Screen
+          name="Crecimiento y desarrollo"
+          component={AgendarComponent}
+          options={headerBar}
+        />
+        <Stack.Screen
+          name="Vacunación"
+          component={AgendarComponent}
+          options={headerBar}
+        />
+        <Stack.Screen
+          name="Desparacitación"
+          component={AgendarComponent}
+          options={headerBar}
+        />
+        <Stack.Screen
+          name="Veterinario en casa"
+          component={AgendarComponent}
+          options={headerBar}
+        />
+
+        <Stack.Screen
+          name="Etólogo"
+          component={AgendarComponent}
+          options={headerBar}
+        />
+        <Stack.Screen
+          name="Nutricionista"
+          component={AgendarComponent}
+          options={headerBar}
+        />
+        <Stack.Screen
+          name="Cirujano"
+          component={AgendarComponent}
+          options={headerBar}
+        />
+
+        <Stack.Screen
+          name="Laboratorio"
+          component={AgendarComponent}
+          options={headerBar}
+        />
+        <Stack.Screen
+          name="Ecografía"
+          component={AgendarComponent}
+          options={headerBar}
+        />
+        <Stack.Screen
+          name="Rayos X"
+          component={AgendarComponent}
+          options={headerBar}
+        />
+        <Stack.Screen
+          name="Cirugías"
+          component={AgendarComponent}
+          options={headerBar}
+        />
+
+        <Stack.Screen
+          name="Paseo"
+          component={AgendarComponent}
+          options={headerBar}
+        />
+        <Stack.Screen
+          name="Hotel"
+          component={AgendarComponent}
+          options={headerBar}
+        />
+        <Stack.Screen
+          name="Guardería"
+          component={AgendarComponent}
+          options={headerBar}
+        />
+
+        <Stack.Screen
+          name="Agregar una mascota"
+          component={AgregarMascota}
           options={headerBar}
         />
       </Stack.Navigator>

@@ -1,15 +1,9 @@
 import { Card, RadioButton } from "react-native-paper";
-import {
-  View,
-  Text,
-  StyleSheet,
-  Image,
-  TextInput,
-  TouchableOpacity,
-} from "react-native";
-import { CheckBox } from "react-native-elements";
-import React, { useState } from "react";
-import BotonGenerico from "./genericButton";
+import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from "react-native";
+import { CheckBox } from 'react-native-elements'
+import React, { useState } from 'react';
+import BotonGenerico from "./genericButton"
+import { ScrollView } from "react-native-gesture-handler";
 
 export default function AgregarMascotaFormulario(props) {
   const { navigation } = props;
@@ -103,6 +97,7 @@ export default function AgregarMascotaFormulario(props) {
 
   return (
     <View>
+      <ScrollView>
       <Card
         style={{
           flexDirection: "row",
@@ -233,6 +228,7 @@ export default function AgregarMascotaFormulario(props) {
           <BotonGenerico title="Guardar" onClick={clickBoton} />
         </Card.Content>
       </Card>
+      </ScrollView>
     </View>
   );
 }
