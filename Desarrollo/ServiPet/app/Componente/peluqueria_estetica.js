@@ -3,34 +3,34 @@ import GenericItemView from "./generic_item";
 import { Card } from "react-native-paper";
 import { View } from "react-native";
 
-export default function clinica_View(props) {
+export default function PeluqueriaEsteticaView(props) {
   const { navigation } = props;
 
   var itemsView = [
     {
-      itemImage: require("../../assets/index/clinicaVet/Icono_Laboratorio.png"),
-      itemTitle: "Laboratorio",
+      itemImage: require("../../assets/index/PeluqueriEst/Icono_Uñas.png"),
+      itemTitle: "Corte de Uñas",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/index/clinicaVet/Icono_Ultrasonido.png"),
-      itemTitle: "Ecografía",
+      itemImage: require("../../assets/index/PeluqueriEst/Icono_Pelo.png"),
+      itemTitle: "Corte de Pelo",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/index/clinicaVet/Icono_RX.png"),
-      itemTitle: "Rayos X",
+      itemImage: require("../../assets/index/PeluqueriEst/Icono_Profilaxis.png"),
+      itemTitle: "Profilaxis",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/index/clinicaVet/Icono_Cirugías.png"),
-      itemTitle: "Cirugías",
+      itemImage: require("../../assets/index/PeluqueriEst/Icono_Baño.png"),
+      itemTitle: "Baño",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: false,
@@ -40,16 +40,16 @@ export default function clinica_View(props) {
   const clickBoton = (name) => {
     console.log("Click desde botón genérico"); //Hay que identificar el boton que fue clickeado
     switch (name) {
-      case "Laboratorio":
+      case "Corte de Uñas":
         console.log("Boton: " + name);
         break;
-      case "Ecografía":
+      case "Corte de Pelo":
         console.log("Boton: " + name);
         break;
-      case "Rayos X":
+      case "Profilaxis":
         console.log("Boton: " + name);
         break;
-      case "Cirugías":
+      case "Baño":
         console.log("Boton: " + name);
         break;
     }

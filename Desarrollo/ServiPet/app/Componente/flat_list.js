@@ -1,5 +1,5 @@
 import * as React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Image, Dimensions } from "react-native";
 import { FlatGrid } from "react-native-super-grid";
 
 export default function FlatListIndex(props) {
@@ -12,20 +12,21 @@ export default function FlatListIndex(props) {
       data={elementos}
       style={styles.gridView}
       staticDimension={300}
-      spacing={5}
+      spacing={10}
       renderItem={({ item }) => (
         <View
-          style={[styles.itemContainer]}
+          style={([styles.itemContainer], [styles.itemContainer])}
           onStartShouldSetResponder={() => {
             clickBoton(item.clickId);
           }}
         >
-          {item.image}
+          <Image style={{ width: "90%", height: "80%" }} source={item.image} />
+
           <Text
             style={{
               width: "100%",
-              height: "40%",
-              fontSize: 18,
+              height: "30%",
+              fontSize: 16,
               color: item.code,
               textAlign: "center",
               textShadowColor: "#fafafa",
@@ -50,5 +51,21 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     height: 150,
+  },
+  itemName: {
+    width: "100%",
+    height: "20%",
+    fontSize: 16,
+    color: "#5d4294",
+    textAlign: "center",
+    textShadowColor: "#fafafa",
+    fontWeight: "600",
+  },
+  itemCode: {
+    width: "100%",
+    height: "20%",
+    fontWeight: "600",
+    fontSize: 14,
+    color: "#5d4294",
   },
 });

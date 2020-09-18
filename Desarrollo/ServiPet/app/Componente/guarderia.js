@@ -3,34 +3,27 @@ import GenericItemView from "./generic_item";
 import { Card } from "react-native-paper";
 import { View } from "react-native";
 
-export default function clinica_View(props) {
+export default function GuarderiaView(props) {
   const { navigation } = props;
 
   var itemsView = [
     {
-      itemImage: require("../../assets/index/clinicaVet/Icono_Laboratorio.png"),
-      itemTitle: "Laboratorio",
+      itemImage: require("../../assets/index/guarderia/Icono_Paseo.png"),
+      itemTitle: "Paseo",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/index/clinicaVet/Icono_Ultrasonido.png"),
-      itemTitle: "Ecografía",
+      itemImage: require("../../assets/index/guarderia/Icono_Hotel.png"),
+      itemTitle: "Hotel",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/index/clinicaVet/Icono_RX.png"),
-      itemTitle: "Rayos X",
-      buttonName: "Agendar cita",
-      colorBoton: "#6ac3c8",
-      mostrarLinea: true,
-    },
-    {
-      itemImage: require("../../assets/index/clinicaVet/Icono_Cirugías.png"),
-      itemTitle: "Cirugías",
+      itemImage: require("../../assets/index/guarderia/Icono_Guardería.png"),
+      itemTitle: "Guardería",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: false,

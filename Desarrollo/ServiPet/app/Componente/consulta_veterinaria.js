@@ -3,34 +3,41 @@ import GenericItemView from "./generic_item";
 import { Card } from "react-native-paper";
 import { View } from "react-native";
 
-export default function clinica_View(props) {
+export default function ConsultaVeterinariaView(props) {
   const { navigation } = props;
 
   var itemsView = [
     {
-      itemImage: require("../../assets/index/clinicaVet/Icono_Laboratorio.png"),
-      itemTitle: "Laboratorio",
+      itemImage: require("../../assets/index/ConsultaVet/Icono_Control.png"),
+      itemTitle: "Control",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/index/clinicaVet/Icono_Ultrasonido.png"),
-      itemTitle: "Ecografía",
+      itemImage: require("../../assets/index/ConsultaVet/Icono_Crecimiento.png"),
+      itemTitle: "Crecimiento y desarrollo",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/index/clinicaVet/Icono_RX.png"),
-      itemTitle: "Rayos X",
+      itemImage: require("../../assets/index/ConsultaVet/Icono_Vacunación.png"),
+      itemTitle: "Vacunación",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/index/clinicaVet/Icono_Cirugías.png"),
-      itemTitle: "Cirugías",
+      itemImage: require("../../assets/index/ConsultaVet/Icono_Desparasitación.png"),
+      itemTitle: "Desparacitación",
+      buttonName: "Agendar cita",
+      colorBoton: "#6ac3c8",
+      mostrarLinea: true,
+    },
+    {
+      itemImage: require("../../assets/index/ConsultaVet/Icono_VetEnCasa.png"),
+      itemTitle: "Veterinario en casa",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: false,

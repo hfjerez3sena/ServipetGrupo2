@@ -5,10 +5,10 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 
 export default function IndexView() {
   const itemsView = [
-    { subTitulo: "Celular:", inputTextId: "celular_Id" },
-    { subTitulo: "Dirección:", inputTextId: "direccion_Id" },
-    { subTitulo: "Especificaciones:", inputTextId: "especificaciones_Id" },
-    { subTitulo: "Barrio:", inputTextId: "barrio_Id" },
+    { subTitulo: "Celular:", inputTextId: "consul_spec" },
+    { subTitulo: "Dirección:", inputTextId: "consul_spec" },
+    { subTitulo: "Especificaciones:", inputTextId: "consul_spec" },
+    { subTitulo: "Barrio:", inputTextId: "consul_spec" },
   ];
 
   let vista = itemsView.map((item) => (
@@ -32,7 +32,7 @@ export default function IndexView() {
       <Card
         style={{
           flexDirection: "row",
-          margin: 20,
+          margin: 5,
           padding: 20,
           alignSelf: "baseline",
           borderRadius: 20,
@@ -45,7 +45,7 @@ export default function IndexView() {
           <View style={styles.confirmacion}>
             <Image
               style={styles.imagen}
-              source={require("./imagenes/Icono__Ambuulancia.svg")}
+              source={require("../../assets/index/urgencias/Icono_Ambuulancia.png")}
             />
             <AppButton title="Confirmar ubicación" onPress={clickBoton} />
           </View>

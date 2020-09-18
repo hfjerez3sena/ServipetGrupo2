@@ -5,7 +5,7 @@ import LineaDivisoria from "./linea_divisora";
 export default function GenericItem(props) {
   const { informationObject, clickBoton } = props;
   const {
-    itemImage = require("./imagenes/Icono__Laboratorio.svg"),
+    itemImage = require("../../assets/Icono_Laboratorio.png"),
     itemTitle = "Titulo",
     buttonName = "Boton",
     colorBoton = "red",
@@ -16,11 +16,14 @@ export default function GenericItem(props) {
       <View
         style={{
           flexDirection: "row",
-          margin: 20,
+          margin: 10,
           justifyContent: "space-evenly",
         }}
       >
-        <Image style={{ width: 100, height: 100 }} source={itemImage} />
+        <Image
+          style={{ tintColor: "#6ac3c8", width: 60, height: 60 }}
+          source={itemImage}
+        />
         <View
           style={{
             justifyContent: "space-evenly",
@@ -29,9 +32,9 @@ export default function GenericItem(props) {
           <Text
             style={{
               color: "#5d4294",
-              fontSize: 30,
-              width: 150,
-              textAlign: "right",
+              fontSize: 25,
+              width: 200,
+              textAlign: "center",
             }}
           >
             {informationObject.itemTitle}

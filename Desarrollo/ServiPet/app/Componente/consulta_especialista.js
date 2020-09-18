@@ -3,34 +3,27 @@ import GenericItemView from "./generic_item";
 import { Card } from "react-native-paper";
 import { View } from "react-native";
 
-export default function clinica_View(props) {
+export default function ConsultaEspecialistaView(props) {
   const { navigation } = props;
 
   var itemsView = [
     {
-      itemImage: require("../../assets/index/clinicaVet/Icono_Laboratorio.png"),
-      itemTitle: "Laboratorio",
+      itemImage: require("../../assets/index/ConsultaEspe/Icono_Etólogo.png"),
+      itemTitle: "Etólogo",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/index/clinicaVet/Icono_Ultrasonido.png"),
-      itemTitle: "Ecografía",
+      itemImage: require("../../assets/index/ConsultaEspe/Icono_Nutricionista.png"),
+      itemTitle: "Nutricionista",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/index/clinicaVet/Icono_RX.png"),
-      itemTitle: "Rayos X",
-      buttonName: "Agendar cita",
-      colorBoton: "#6ac3c8",
-      mostrarLinea: true,
-    },
-    {
-      itemImage: require("../../assets/index/clinicaVet/Icono_Cirugías.png"),
-      itemTitle: "Cirugías",
+      itemImage: require("../../assets/index/ConsultaEspe/Icono_Cirujano.png"),
+      itemTitle: "Cirujano",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: false,
