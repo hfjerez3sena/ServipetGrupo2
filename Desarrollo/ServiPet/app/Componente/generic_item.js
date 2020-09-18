@@ -48,7 +48,7 @@ export default function GenericItem(props) {
           </Text>
           
           <AppButton title={informationObject.buttonName}
-            title="Confirmar ubicación" onPress={() => {
+            title="Agendar cita" onPress={() => {
               clickBoton(informationObject.itemTitle);
             }}/>
         </View>

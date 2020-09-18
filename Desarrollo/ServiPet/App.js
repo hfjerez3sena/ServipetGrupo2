@@ -7,11 +7,18 @@ import PeluqueriaEsteticaView from "./app/Componente/peluqueria_estetica";
 import ConsultaVeterinariaView from "./app/Componente/consulta_veterinaria";
 import ConsultaEspecialistaView from "./app/Componente/consulta_especialista";
 import Guarderia from "./app/Componente/guarderia";
+import Login from "./app/Componente/login";
 
 import Index from "./app/Componente/index"
 import Urgencias from "./app/Componente/urgencias"
 import AgendarView from "./app/Componente/agendar_generic_view"
 import AgregarMascotaFormulario from "./app/Componente/agregar_mascota_formulario"
+
+function LoginComponent({ navigation }) {
+  return (
+    <Login navigation={navigation}/>
+  );
+}
 
 function GuarderiaComponent({ navigation }) {
   return (
