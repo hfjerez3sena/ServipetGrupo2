@@ -25,6 +25,13 @@ import Agendar_nutricionista from "./app/Componente/agendar_nutricionista";
 import Agendar_profilaxis from "./app/Componente/agendar_profilaxis";
 import Agendar_vacunacion from "./app/Componente/agendar_vacunacion";
 import Agendar_veterinario_casa from "./app/Componente/agendar_veterinario_casa";
+import Agendar_laboratorio from "./app/Componente/agendar_laboratorio";
+import Agendar_ecografia from "./app/Componente/agendar_ecografia";
+import Agendar_rayosX from "./app/Componente/agendar_rayosX";
+import Agendar_cirugias from "./app/Componente/agendar_cirugias";
+import Agendar_paseo from "./app/Componente/agendar_paseo";
+import Agendar_hotel from "./app/Componente/agendar_hotel";
+import Agendar_guarderia from "./app/Componente/agendar_guarderia";
 
 function LoginComponent({ navigation }) {
   return <Login navigation={navigation} />;
@@ -144,7 +151,6 @@ function App() {
           component={ConsultaVeterinariaComponent}
           options={headerBar}
         />
-
         <Stack.Screen
           name="Corte de uñas"
           component={Agendar_corte_uñas}
@@ -165,7 +171,6 @@ function App() {
           component={Agendar_baño}
           options={headerBar}
         />
-
         <Stack.Screen
           name="Control"
           component={Agendar_control}
@@ -191,7 +196,6 @@ function App() {
           component={Agendar_veterinario_casa}
           options={headerBar}
         />
-
         <Stack.Screen
           name="Etólogo"
           component={Agendar_etologo}
@@ -207,41 +211,39 @@ function App() {
           component={Agendar_cirujano}
           options={headerBar}
         />
-
         <Stack.Screen
           name="Laboratorio"
-          component={AgendarComponent}
+          component={Agendar_laboratorio}
           options={headerBar}
         />
         <Stack.Screen
           name="Ecografía"
-          component={AgendarComponent}
+          component={Agendar_ecografia}
           options={headerBar}
         />
         <Stack.Screen
           name="Rayos X"
-          component={AgendarComponent}
+          component={Agendar_rayosX}
           options={headerBar}
         />
         <Stack.Screen
           name="Cirugías"
-          component={AgendarComponent}
+          component={Agendar_cirugias}
           options={headerBar}
         />
-
         <Stack.Screen
           name="Paseo"
-          component={AgendarComponent}
+          component={Agendar_paseo}
           options={headerBar}
         />
         <Stack.Screen
           name="Hotel"
-          component={AgendarComponent}
+          component={Agendar_hotel}
           options={headerBar}
         />
         <Stack.Screen
           name="Guardería"
-          component={AgendarComponent}
+          component={Agendar_guarderia}
           options={headerBar}
         />
 

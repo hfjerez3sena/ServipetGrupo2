@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
+import { preventAutoHide } from "expo/build/launch/SplashScreen";
 
 export default function AgendarGeneric(props) {
   const { navigation } = props;
@@ -96,7 +97,6 @@ export default function AgendarGeneric(props) {
                     }
                   </Card.Content>
                 </Card>
-
                 <Text style={styles.textViewOne}>Fecha:</Text>
                 <View style={styles.textInputImageStyle}>
                   <Image
