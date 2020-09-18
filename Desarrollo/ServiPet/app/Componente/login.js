@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Card } from "react-native-paper";
 import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from "react-native";
-import Imagenn from "./imagenes/Icono__Control.svg"
 
 export default function LoginView(props) {
 
