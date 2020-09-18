@@ -34,16 +34,15 @@ export default function ConsultaEspecialistaView(props) {
     console.log("Click desde botón genérico"); //Hay que identificar el boton que fue clickeado
     switch (name) {
       case "Etólogo":
-        navigation.navigate("Etólogo");
+        navigation.navigate('Etólogo');
         break;
       case "Nutricionista":
-        navigation.navigate("Nutricionista");
+        navigation.navigate('Nutricionista');
         break;
       case "Cirujano":
-        navigation.navigate("Cirujano");
+        navigation.navigate('Cirujano');
         break;
     }
-    //console.log("Boton: "+name)
   };
 
   let items = itemsView.map((genericItem) => (

@@ -15,7 +15,7 @@ export default function AgendarGeneric(props) {
   );
 
   const clickBoton=(name)=>{
-    navigation.navigate("Agregar una mascota")
+    navigation.navigate("Registro finalizado")
   };
 
   return (

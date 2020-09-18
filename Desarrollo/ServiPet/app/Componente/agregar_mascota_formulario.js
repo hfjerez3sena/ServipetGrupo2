@@ -88,7 +88,7 @@ export default function AgregarMascotaFormulario(props) {
   );
 
   const clickBoton = (name) => {
-    console.log("Guardar mascota");
+    navigation.navigate("Confirmar fecha");
   };
 
   const clickRadioDog = (name) => {

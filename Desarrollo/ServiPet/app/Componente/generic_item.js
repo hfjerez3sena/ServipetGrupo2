@@ -24,7 +24,8 @@ export default function GenericItem(props) {
         style={{
           flexDirection: "row",
           margin: 10,
-          justifyContent: "space-evenly",
+          marginBottom: 30,
+          justifyContent: "space-around",
         }}
       >
         <Image
@@ -34,6 +35,7 @@ export default function GenericItem(props) {
         <View
           style={{
             justifyContent: "space-evenly",
+            alignItems: "center",
           }}
         >
           <Text
@@ -65,7 +67,8 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     paddingVertical: 1,
     paddingHorizontal: 12,
-    backgroundColor: "#6ac3c8"
+    backgroundColor: "#6ac3c8",
+    marginTop:10
   },
     appButtonText: {
       fontSize: 20,

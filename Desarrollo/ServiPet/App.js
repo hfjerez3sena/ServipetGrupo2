@@ -14,8 +14,13 @@ import Index from "./app/Componente/index";
 import Urgencias from "./app/Componente/urgencias";
 import AgendarView from "./app/Componente/agendar_generic_view";
 import AgregarMascotaFormulario from "./app/Componente/agregar_mascota_formulario";
+import RegistroConfirmado from "./app/Componente/registro_confirmado";
 
-function LoginComponent({ navigation }) {
+function RegistroConfirmadoComponent({navigation}) {
+  return <RegistroConfirmado navigation={navigation} />;
+}
+
+function LoginComponent({navigation}) {
   return <Login navigation={navigation} />;
 }
 
@@ -136,107 +141,114 @@ function App() {
 
         <Stack.Screen
           name="Corte de uñas"
-          component={AgendarComponent}
+          component={AgregarMascota}
           options={headerBar}
         />
         <Stack.Screen
           name="Corte de pelo"
-          component={AgendarComponent}
+          component={AgregarMascota}
           options={headerBar}
         />
         <Stack.Screen
           name="Profilaxis"
-          component={AgendarComponent}
+          component={AgregarMascota}
           options={headerBar}
         />
         <Stack.Screen
           name="Baño"
-          component={AgendarComponent}
+          component={AgregarMascota}
           options={headerBar}
         />
 
         <Stack.Screen
           name="Control"
-          component={AgendarComponent}
+          component={AgregarMascota}
           options={headerBar}
         />
         <Stack.Screen
           name="Crecimiento y desarrollo"
-          component={AgendarComponent}
+          component={AgregarMascota}
           options={headerBar}
         />
         <Stack.Screen
           name="Vacunación"
-          component={AgendarComponent}
+          component={AgregarMascota}
           options={headerBar}
         />
         <Stack.Screen
           name="Desparacitación"
-          component={AgendarComponent}
+          component={AgregarMascota}
           options={headerBar}
         />
         <Stack.Screen
           name="Veterinario en casa"
-          component={AgendarComponent}
+          component={AgregarMascota}
           options={headerBar}
         />
 
         <Stack.Screen
           name="Etólogo"
-          component={AgendarComponent}
+          component={AgregarMascota}
           options={headerBar}
         />
         <Stack.Screen
           name="Nutricionista"
-          component={AgendarComponent}
+          component={AgregarMascota}
           options={headerBar}
         />
         <Stack.Screen
           name="Cirujano"
-          component={AgendarComponent}
+          component={AgregarMascota}
           options={headerBar}
         />
 
         <Stack.Screen
           name="Laboratorio"
-          component={AgendarComponent}
+          component={AgregarMascota}
           options={headerBar}
         />
         <Stack.Screen
           name="Ecografía"
-          component={AgendarComponent}
+          component={AgregarMascota}
           options={headerBar}
         />
         <Stack.Screen
           name="Rayos X"
-          component={AgendarComponent}
+          component={AgregarMascota}
           options={headerBar}
         />
         <Stack.Screen
           name="Cirugías"
-          component={AgendarComponent}
+          component={AgregarMascota}
           options={headerBar}
         />
 
         <Stack.Screen
           name="Paseo"
-          component={AgendarComponent}
+          component={AgregarMascota}
           options={headerBar}
         />
         <Stack.Screen
           name="Hotel"
-          component={AgendarComponent}
+          component={AgregarMascota}
           options={headerBar}
         />
         <Stack.Screen
           name="Guardería"
-          component={AgendarComponent}
+          component={AgregarMascota}
           options={headerBar}
         />
 
         <Stack.Screen
-          name="Agregar una mascota"
-          component={AgregarMascota}
+          name="Confirmar fecha"
+          component={AgendarComponent}
+          options={headerBar}
+        />
+
+
+        <Stack.Screen
+          name="Registro finalizado"
+          component={RegistroConfirmadoComponent}
           options={headerBar}
         />
       </Stack.Navigator>

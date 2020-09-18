@@ -2,20 +2,23 @@ import * as React from "react";
 import { Card } from "react-native-paper";
 import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from "react-native";
 
-export default function LoginView(props) {
+export default function LoginView( props ) {
 
-  const { navigation } = props
-
+  const { navigation } = props;
   const AppButton = ({ onPress, title }) => (//Creación de un estilo de boton
     <TouchableOpacity onPress={onPress} style={styles.appButtonContainer}>
+        <Image
+          style={{ width: 45, height: 45, marginStart: 20 }}
+          source={require("../../assets/Google_Logo.png")}
+        />
       <Text style={styles.appButtonText}>{title}</Text>
     </TouchableOpacity>
   );
 
   const clickBoton=(name)=>{
-    console.log("Boton: "+name+" CLICK: Agendar Genérico");
+    //console.log({otherParam})
+    navigation.navigate("Nutricionista")
   };
-
   return (
     <View style={{
         flexDirection: "row",
@@ -35,12 +38,10 @@ export default function LoginView(props) {
         elevation={10}
       >
         <Card.Content>
-            
-        <View style={styles.textInputImageStyle}>
-            <TextInput style={styles.freeTextInputBig} /> 
-        </View>
-        <AppButton title="Agendar cita" onPress={clickBoton}/>
         
+          <Image source={require("../../assets/servipet.png")} style={{ marginTop: 50, width: 245, height: 45, alignSelf:"center" }}/>
+          <Text style={styles.textOne}>Accede de forma rapida y segura a todos nuestros servicios utilizando tu cuenta de google</Text>
+          <AppButton title="Registrarse o iniciar seción" onPress={clickBoton}/>
         </Card.Content>
       </Card>
     </View>
@@ -48,24 +49,52 @@ export default function LoginView(props) {
 }
 
 const styles = StyleSheet.create({
+  textOne: {
+    marginStart: 20,
+    marginEnd: 20,
+    marginTop: 50,
+    marginBottom: 50,
+    textAlign: "center",
+    fontSize: 15,
+    color: "gray"
+  },
     appButtonText: {
-      fontSize: 20,
+      fontSize: 15,
       paddingEnd: 10,
+      marginEnd: 20,
       paddingStart: 10,
       paddingBottom: 2,
-      color: "#fff",
-      fontWeight: "bold",
+      color: "#5d4294",
       alignSelf: "center",
       textTransform: "none"
     },
     appButtonContainer: {
         elevation: 8,
-        width: 250,
         marginTop: 10,
         alignSelf: "center",
-        backgroundColor: "#5d4294",
-        borderRadius: 20,
+        borderWidth:4,
+        borderColor: "#6ac3c8",
+        backgroundColor: "white",
+        borderRadius: 40,
         paddingVertical: 1,
-        paddingHorizontal: 12
+        flexDirection: "row",
+        marginBottom: 50
+      },
+      container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+      container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+      linearGradient: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 5,
+        height: 200,
+        width: 350,
       },
 });
