@@ -4,26 +4,25 @@ import { Card } from "react-native-paper";
 import { View } from "react-native";
 
 export default function ConsultaEspecialistaView(props) {
-
-  const { navigation } = props
+  const { navigation } = props;
 
   var itemsView = [
     {
-      itemImage: require("./imagenes/Icono__Laboratorio.svg"),
+      itemImage: require("../../assets/index/ConsultaEspe/Icono_Etólogo.png"),
       itemTitle: "Etólogo",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("./imagenes/Icono__Ultrasonido.svg"),
+      itemImage: require("../../assets/index/ConsultaEspe/Icono_Nutricionista.png"),
       itemTitle: "Nutricionista",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("./imagenes/Icono__RX.svg"),
+      itemImage: require("../../assets/index/ConsultaEspe/Icono_Cirujano.png"),
       itemTitle: "Cirujano",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",

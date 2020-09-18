@@ -5,40 +5,39 @@ import { View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 
 export default function ConsultaVeterinariaView(props) {
-
-  const { navigation } = props
+  const { navigation } = props;
 
   var itemsView = [
     {
-      itemImage: require("./imagenes/Icono__Laboratorio.svg"),
+      itemImage: require("../../assets/index/ConsultaVet/Icono_Control.png"),
       itemTitle: "Control",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("./imagenes/Icono__Ultrasonido.svg"),
+      itemImage: require("../../assets/index/ConsultaVet/Icono_Crecimiento.png"),
       itemTitle: "Crecimiento y desarrollo",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("./imagenes/Icono__RX.svg"),
+      itemImage: require("../../assets/index/ConsultaVet/Icono_Vacunación.png"),
       itemTitle: "Vacunación",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("./imagenes/Icono__Cirugías.svg"),
+      itemImage: require("../../assets/index/ConsultaVet/Icono_Desparasitación.png"),
       itemTitle: "Desparacitación",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("./imagenes/Icono__Cirugías.svg"),
+      itemImage: require("../../assets/index/ConsultaVet/Icono_VetEnCasa.png"),
       itemTitle: "Veterinario en casa",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
