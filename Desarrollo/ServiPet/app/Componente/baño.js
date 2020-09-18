@@ -14,7 +14,7 @@ export default function Baño() {
     >
       <Image
         style={{ tintColor: "#6ac3c8", width: 100, height: 100 }}
-        source={require("./imagenes/Icono__Baño.svg")}
+        source={require("../../assets/index/PeluqueriEst/Icono_Baño.png")}
       />
       <View>
         <Text

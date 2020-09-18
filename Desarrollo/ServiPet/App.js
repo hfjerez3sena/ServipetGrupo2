@@ -9,11 +9,22 @@ import ConsultaVeterinariaView from "./app/Componente/consulta_veterinaria";
 import ConsultaEspecialistaView from "./app/Componente/consulta_especialista";
 import Guarderia from "./app/Componente/guarderia";
 import Login from "./app/Componente/login";
-
 import Index from "./app/Componente/index";
 import Urgencias from "./app/Componente/urgencias";
 import AgendarView from "./app/Componente/agendar_generic_view";
 import AgregarMascotaFormulario from "./app/Componente/agregar_mascota_formulario";
+import Agendar_baño from "./app/Componente/agendar_baño";
+import Agendar_cirujano from "./app/Componente/agendar_cirujano";
+import Agendar_control from "./app/Componente/agendar_control";
+import Agendar_corte_pelo from "./app/Componente/agendar_corte_pelo";
+import Agendar_corte_uñas from "./app/Componente/agendar_corte_uñas";
+import Agendar_crecimiento_desarrollo from "./app/Componente/agendar_crecimiento_desarrollo";
+import Agendar_desparacitacion from "./app/Componente/agendar_desparacitacion";
+import Agendar_etologo from "./app/Componente/agendar_etologo";
+import Agendar_nutricionista from "./app/Componente/agendar_nutricionista";
+import Agendar_profilaxis from "./app/Componente/agendar_profilaxis";
+import Agendar_vacunacion from "./app/Componente/agendar_vacunacion";
+import Agendar_veterinario_casa from "./app/Componente/agendar_veterinario_casa";
 
 function LoginComponent({ navigation }) {
   return <Login navigation={navigation} />;
@@ -136,64 +147,64 @@ function App() {
 
         <Stack.Screen
           name="Corte de uñas"
-          component={AgendarComponent}
+          component={Agendar_corte_uñas}
           options={headerBar}
         />
         <Stack.Screen
           name="Corte de pelo"
-          component={AgendarComponent}
+          component={Agendar_corte_pelo}
           options={headerBar}
         />
         <Stack.Screen
           name="Profilaxis"
-          component={AgendarComponent}
+          component={Agendar_profilaxis}
           options={headerBar}
         />
         <Stack.Screen
           name="Baño"
-          component={AgendarComponent}
+          component={Agendar_baño}
           options={headerBar}
         />
 
         <Stack.Screen
           name="Control"
-          component={AgendarComponent}
+          component={Agendar_control}
           options={headerBar}
         />
         <Stack.Screen
           name="Crecimiento y desarrollo"
-          component={AgendarComponent}
+          component={Agendar_crecimiento_desarrollo}
           options={headerBar}
         />
         <Stack.Screen
           name="Vacunación"
-          component={AgendarComponent}
+          component={Agendar_vacunacion}
           options={headerBar}
         />
         <Stack.Screen
           name="Desparacitación"
-          component={AgendarComponent}
+          component={Agendar_desparacitacion}
           options={headerBar}
         />
         <Stack.Screen
           name="Veterinario en casa"
-          component={AgendarComponent}
+          component={Agendar_veterinario_casa}
           options={headerBar}
         />
 
         <Stack.Screen
           name="Etólogo"
-          component={AgendarComponent}
+          component={Agendar_etologo}
           options={headerBar}
         />
         <Stack.Screen
           name="Nutricionista"
-          component={AgendarComponent}
+          component={Agendar_nutricionista}
           options={headerBar}
         />
         <Stack.Screen
           name="Cirujano"
-          component={AgendarComponent}
+          component={Agendar_cirujano}
           options={headerBar}
         />
 

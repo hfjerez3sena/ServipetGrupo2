@@ -6,28 +6,28 @@ import { View } from "react-native";
 export default function genericView() {
   var itemsView = [
     {
-      itemImage: require("../../assets/Icono_Laboratorio.png"),
+      itemImage: require("../../assets/index/ClinicaVet/Icono_Laboratorio.png"),
       itemTitle: "Laboratorio",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/Icono_Ultrasonido.png"),
+      itemImage: require("../../assets/index/ClinicaVet/Icono_Ultrasonido.png"),
       itemTitle: "Ecografía",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/Icono_RX.png"),
+      itemImage: require("../../assets/index/ClinicaVet/Icono_RX.png"),
       itemTitle: "Rayos X",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/Icono_Cirugías.png"),
+      itemImage: require("../../assets/index/ClinicaVet/Icono_Cirugías.png"),
       itemTitle: "Cirugías",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",

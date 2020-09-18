@@ -8,21 +8,21 @@ export default function GuarderiaView(props) {
 
   var itemsView = [
     {
-      itemImage: require("../../assets/index/guarderia/Icono_Paseo.png"),
+      itemImage: require("../../assets/index/Guarderia/Icono_Paseo.png"),
       itemTitle: "Paseo",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/index/guarderia/Icono_Hotel.png"),
+      itemImage: require("../../assets/index/Guarderia/Icono_Hotel.png"),
       itemTitle: "Hotel",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/index/guarderia/Icono_Guardería.png"),
+      itemImage: require("../../assets/index/Guarderia/Icono_Guardería.png"),
       itemTitle: "Guardería",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
@@ -32,9 +32,15 @@ export default function GuarderiaView(props) {
 
   const clickBoton = (name) => {
     switch (name) {
-      case "Paseo": navigation.navigate("Paseo"); break;
-      case "Hotel": navigation.navigate("Hotel"); break;
-      case "Guardería": navigation.navigate("Guardería"); break;
+      case "Paseo":
+        navigation.navigate("Paseo");
+        break;
+      case "Hotel":
+        navigation.navigate("Hotel");
+        break;
+      case "Guardería":
+        navigation.navigate("Guardería");
+        break;
     }
   };
 

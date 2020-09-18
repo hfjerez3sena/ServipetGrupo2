@@ -9,7 +9,7 @@ export default function IndexView(props) {
   const itemsView = React.useState([
     {
       name: "Urgencias",
-      image: require("../../assets/index/Icono_Urgencias.png"),
+      image: require("../../assets/index/Urgencias/Icono_Urgencias.png"),
       code: "red",
       clickId: "urgencias",
     },
@@ -39,7 +39,7 @@ export default function IndexView(props) {
     },
     {
       name: "Guarderia",
-      image: require("../../assets/index/Icono_Guardería.png"),
+      image: require("../../assets/index/Icono_Guardería_1.png"),
       code: "#5d4294",
       clickId: "guarderia",
     },

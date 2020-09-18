@@ -45,7 +45,7 @@ export default function IndexView() {
           <View style={styles.confirmacion}>
             <Image
               style={styles.imagen}
-              source={require("../../assets/index/urgencias/Icono_Ambuulancia.png")}
+              source={require("../../assets/Icono_Ambuulancia.png")}
             />
             <AppButton title="Confirmar ubicación" onPress={clickBoton} />
           </View>

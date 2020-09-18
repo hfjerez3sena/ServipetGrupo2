@@ -1,6 +1,13 @@
 import * as React from "react";
 import { Card } from "react-native-paper";
-import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 
 export default function AgendarGeneric(props) {
@@ -14,117 +21,117 @@ export default function AgendarGeneric(props) {
     </TouchableOpacity>
   );
 
-  const clickBoton=(name)=>{
-    navigation.navigate("Agregar una mascota")
+  const clickBoton = (name) => {
+    navigation.navigate("Agregar una mascota");
   };
 
   return (
     <View>
       <ScrollView>
-      <Card
-        style={{
-          flexDirection: "row",
-          margin: 20,
-          alignSelf: "center",
-          borderRadius: 20,
-          justifyContent: "space-evenly",
-        }}
-        elevation={10}
-      >
-        <Card.Content>
-          {
-            <View>
-              <Text style={styles.titleOneStyle}>Agendar Servicio</Text>
-              <Text style={styles.titleThreeStyle}>
-                Reemplazar este texto por el que corresponde. Se mostrará un
-                texto rojo con información de pre-requisitos necesarios.
-              </Text>
-              <Card
-                style={{
-                  flexDirection: "row",
-                  margin: 10,
-                  alignSelf: "center",
-                  borderRadius: 20,
-                  backgroundColor: "#EFEFEF",
-                  justifyContent: "space-evenly",
-                }}
-                elevation={10}
-              >
-                <Card.Content>
-                  {
-                    <View>
-                      <Text style={styles.titleTwoStyle}>
-                        Información de la mascota
-                      </Text>
-                      <View style={styles.doubleRow}>
-                        <Image
-                          source={require("../../assets/Icono_Cirugías.png")}
-                          style={styles.imageOne}
-                        />
-                        <View style={styles.viewContainerStyle}>
-                          <TextInput
-                            style={styles.editTextStyle}
-                            placeholder="Género"
+        <Card
+          style={{
+            flexDirection: "row",
+            margin: 20,
+            alignSelf: "center",
+            borderRadius: 20,
+            justifyContent: "space-evenly",
+          }}
+          elevation={10}
+        >
+          <Card.Content>
+            {
+              <View>
+                <Text style={styles.titleOneStyle}>Agendar Servicio</Text>
+                <Text style={styles.titleThreeStyle}>
+                  Reemplazar este texto por el que corresponde. Se mostrará un
+                  texto rojo con información de pre-requisitos necesarios.
+                </Text>
+                <Card
+                  style={{
+                    flexDirection: "row",
+                    margin: 10,
+                    alignSelf: "center",
+                    borderRadius: 20,
+                    backgroundColor: "#EFEFEF",
+                    justifyContent: "space-evenly",
+                  }}
+                  elevation={10}
+                >
+                  <Card.Content>
+                    {
+                      <View>
+                        <Text style={styles.titleTwoStyle}>
+                          Información de la mascota
+                        </Text>
+                        <View style={styles.doubleRow}>
+                          <Image
+                            source={require("../../assets/index/PeluqueriEst/Icono_Baño.png")}
+                            style={styles.imageOne}
                           />
-                          <TextInput
-                            style={styles.editTextStyle}
-                            placeholder="Edad"
-                          />
+                          <View style={styles.viewContainerStyle}>
+                            <TextInput
+                              style={styles.editTextStyle}
+                              placeholder="Género"
+                            />
+                            <TextInput
+                              style={styles.editTextStyle}
+                              placeholder="Edad"
+                            />
+                          </View>
                         </View>
+                        <TextInput
+                          style={styles.editTextStyle}
+                          placeholder="Nombre"
+                        />
+                        <TextInput
+                          style={styles.editTextStyle}
+                          placeholder="Raza"
+                        />
+                        <Text style={styles.textViewTwo}>Carácter</Text>
+                        <TextInput
+                          style={styles.editTextStyle}
+                          placeholder="Rojo, Amarillo, Verde, etc."
+                        />
                       </View>
-                      <TextInput
-                        style={styles.editTextStyle}
-                        placeholder="Nombre"
-                      />
-                      <TextInput
-                        style={styles.editTextStyle}
-                        placeholder="Raza"
-                      />
-                      <Text style={styles.textViewTwo}>Carácter</Text>
-                      <TextInput
-                        style={styles.editTextStyle}
-                        placeholder="Rojo, Amarillo, Verde, etc."
-                      />
-                    </View>
-                  }
-                </Card.Content>
-              </Card>
+                    }
+                  </Card.Content>
+                </Card>
 
-              <Text style={styles.textViewOne}>Fecha:</Text>
-              <View style={styles.textInputImageStyle}>
-                <Image
-                  source={require("../../assets/Icono_Cirugías.png")}
-                  style={styles.imageTwo}
-                />
-                <TextInput
-                  style={styles.freeTextInputStyle}
-                  placeholder="dd-mm-year"
-                />
+                <Text style={styles.textViewOne}>Fecha:</Text>
+                <View style={styles.textInputImageStyle}>
+                  <Image
+                    source={require("../../assets/index/ClinicaVet/Icono_Cirugías.png")}
+                    style={styles.imageTwo}
+                  />
+                  <TextInput
+                    style={styles.freeTextInputStyle}
+                    placeholder="dd-mm-year"
+                  />
+                </View>
+                <Text style={styles.textViewOne}>Hora:</Text>
+                <View style={styles.textInputImageStyle}>
+                  <Image
+                    source={require("../../assets/index/ClinicaVet/Icono_Cirugías.png")}
+                    style={styles.imageTwo}
+                  />
+                  <TextInput
+                    style={styles.freeTextInputStyle}
+                    placeholder="00: 00 am"
+                  />
+                </View>
+                <Text style={styles.textViewOne}>Observaciones:</Text>
+                <Text style={styles.textViewThree}>
+                  Cuentanos si tu mascota tiene alguna alergia, enfermedad o
+                  requiere algun cuidado especial
+                </Text>
+                <View style={styles.textInputImageStyle}>
+                  <TextInput style={styles.freeTextInputBig} />
+                </View>
+                <AppButton title="Agendar cita" onPress={clickBoton} />
               </View>
-              <Text style={styles.textViewOne}>Hora:</Text>
-              <View style={styles.textInputImageStyle}>
-                <Image
-                  source={require("../../assets/Icono_Cirugías.png")}
-                  style={styles.imageTwo}
-                />
-                <TextInput
-                  style={styles.freeTextInputStyle}
-                  placeholder="00: 00 am"
-                />
-              </View>
-              <Text style={styles.textViewOne}>Observaciones:</Text>
-              <Text style={styles.textViewThree}>
-                Cuentanos si tu mascota tiene alguna alergia, enfermedad o
-                requiere algun cuidado especial
-              </Text>
-              <View style={styles.textInputImageStyle}>
-                <TextInput style={styles.freeTextInputBig} />
-              </View>
-              <AppButton title="Agendar cita" onPress={clickBoton} />
-            </View>
-          }
-        </Card.Content>
-      </Card>
+            }
+          </Card.Content>
+        </Card>
       </ScrollView>
     </View>
   );

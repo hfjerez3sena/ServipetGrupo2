@@ -8,28 +8,28 @@ export default function clinica_View(props) {
 
   var itemsView = [
     {
-      itemImage: require("../../assets/index/clinicaVet/Icono_Laboratorio.png"),
+      itemImage: require("../../assets/index/ClinicaVet/Icono_Laboratorio.png"),
       itemTitle: "Laboratorio",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/index/clinicaVet/Icono_Ultrasonido.png"),
+      itemImage: require("../../assets/index/ClinicaVet/Icono_Ultrasonido.png"),
       itemTitle: "Ecografía",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/index/clinicaVet/Icono_RX.png"),
+      itemImage: require("../../assets/index/ClinicaVet/Icono_RX.png"),
       itemTitle: "Rayos X",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/index/clinicaVet/Icono_Cirugías.png"),
+      itemImage: require("../../assets/index/ClinicaVet/Icono_Cirugías.png"),
       itemTitle: "Cirugías",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
@@ -38,10 +38,18 @@ export default function clinica_View(props) {
   ];
   const clickBoton = (name) => {
     switch (name) {
-      case "Laboratorio": navigation.navigate("Laboratorio"); break;
-      case "Ecografía": navigation.navigate("Ecografía"); break;
-      case "Rayos X": navigation.navigate("Rayos X"); break;
-      case "Cirugías": navigation.navigate("Cirugías"); break;
+      case "Laboratorio":
+        navigation.navigate("Laboratorio");
+        break;
+      case "Ecografía":
+        navigation.navigate("Ecografía");
+        break;
+      case "Rayos X":
+        navigation.navigate("Rayos X");
+        break;
+      case "Cirugías":
+        navigation.navigate("Cirugías");
+        break;
     }
   };
 
