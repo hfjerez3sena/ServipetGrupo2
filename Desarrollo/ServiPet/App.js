@@ -2,6 +2,7 @@ import * as React from "react";
 import { Image, View, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import GeneriView from "./app/Componente/generic_view";
 import Clinica_View from "./app/Componente/clinica_View";
 import PeluqueriaEsteticaView from "./app/Componente/peluqueria_estetica";
 import ConsultaVeterinariaView from "./app/Componente/consulta_veterinaria";

@@ -3,32 +3,25 @@ import GenericItemView from "./generic_item";
 import { Card } from "react-native-paper";
 import { View } from "react-native";
 
-export default function genericView() {
+export default function consulta_Esp_View() {
   var itemsView = [
     {
-      itemImage: require("../../assets/Icono_Laboratorio.png"),
-      itemTitle: "Laboratorio",
+      itemImage: require("./imagenes/Icono__Etólogo.svg"),
+      itemTitle: "Etólogo",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/Icono_Ultrasonido.png"),
-      itemTitle: "Ecografía",
+      itemImage: require("./imagenes/Icono__Nutricionista.svg"),
+      itemTitle: "Nutricionista",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/Icono_RX.png"),
-      itemTitle: "Rayos X",
-      buttonName: "Agendar cita",
-      colorBoton: "#6ac3c8",
-      mostrarLinea: true,
-    },
-    {
-      itemImage: require("../../assets/Icono_Cirugías.png"),
-      itemTitle: "Cirugías",
+      itemImage: require("./imagenes/Icono__Cirujano.svg"),
+      itemTitle: "Cirujano",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: false,
@@ -36,23 +29,19 @@ export default function genericView() {
   ];
 
   const clickBoton = (name) => {
+    console.log("Click desde botón genérico");
     switch (name) {
-      case "Laboratorio":
+      case "Etólogo":
         console.log("Boton: " + name);
         break;
-
-      case "Ecografía":
+      case "Nutricionista":
         console.log("Boton: " + name);
         break;
-
-      case "Rayos X":
-        console.log("Boton: " + name);
-        break;
-
-      case "Cirugías":
+      case "Cirujano":
         console.log("Boton: " + name);
         break;
     }
+    //console.log("Boton: "+name)
   };
 
   let items = itemsView.map((genericItem) => (
@@ -64,6 +53,7 @@ export default function genericView() {
       <Card
         style={{
           flexDirection: "row",
+          height: "height",
           margin: 20,
           alignSelf: "center",
           borderRadius: 20,

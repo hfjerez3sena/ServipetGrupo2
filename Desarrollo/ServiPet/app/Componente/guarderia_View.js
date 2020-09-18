@@ -3,32 +3,25 @@ import GenericItemView from "./generic_item";
 import { Card } from "react-native-paper";
 import { View } from "react-native";
 
-export default function genericView() {
+export default function guarderia_View() {
   var itemsView = [
     {
-      itemImage: require("../../assets/Icono_Laboratorio.png"),
-      itemTitle: "Laboratorio",
+      itemImage: require("./imagenes/Icono__Paseo.svg"),
+      itemTitle: "Paseo",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/Icono_Ultrasonido.png"),
-      itemTitle: "Ecografía",
+      itemImage: require("./imagenes/Icono__Hotel.svg"),
+      itemTitle: "Hotel",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: true,
     },
     {
-      itemImage: require("../../assets/Icono_RX.png"),
-      itemTitle: "Rayos X",
-      buttonName: "Agendar cita",
-      colorBoton: "#6ac3c8",
-      mostrarLinea: true,
-    },
-    {
-      itemImage: require("../../assets/Icono_Cirugías.png"),
-      itemTitle: "Cirugías",
+      itemImage: require("./imagenes/Icono__Guardería-31.svg"),
+      itemTitle: "Guarderia",
       buttonName: "Agendar cita",
       colorBoton: "#6ac3c8",
       mostrarLinea: false,
@@ -36,23 +29,19 @@ export default function genericView() {
   ];
 
   const clickBoton = (name) => {
+    console.log("Click desde botón genérico");
     switch (name) {
-      case "Laboratorio":
+      case "Paseo":
         console.log("Boton: " + name);
         break;
-
-      case "Ecografía":
+      case "Hotel":
         console.log("Boton: " + name);
         break;
-
-      case "Rayos X":
-        console.log("Boton: " + name);
-        break;
-
-      case "Cirugías":
+      case "Guardería":
         console.log("Boton: " + name);
         break;
     }
+    //console.log("Boton: "+name)
   };
 
   let items = itemsView.map((genericItem) => (
@@ -65,7 +54,7 @@ export default function genericView() {
         style={{
           flexDirection: "row",
           margin: 20,
-          alignSelf: "center",
+          alignContent: "center",
           borderRadius: 20,
           justifyContent: "space-evenly",
         }}
