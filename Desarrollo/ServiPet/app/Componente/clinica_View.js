@@ -37,7 +37,6 @@ export default function clinica_View(props) {
       mostrarLinea: false,
     },
   ];
-
   const clickBoton = (name) => {
     switch (name) {
       case "Laboratorio": navigation.navigate("Laboratorio"); break;
@@ -50,7 +49,6 @@ export default function clinica_View(props) {
   let items = itemsView.map((genericItem) => (
     <GenericItemView informationObject={genericItem} clickBoton={clickBoton} />
   ));
-
   return (
     <View>
       <Card

@@ -1,19 +1,27 @@
 Arguments: 
+<<<<<<< HEAD
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+=======
   C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-native-community
+>>>>>>> dfb7a14b5fc75807ee549255303027ed114cb72b
 
 PATH: 
-  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\TortoiseGit\bin;C:\Program Files\MATLAB\R2019a\bin;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Users\Usuario\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\Usuario\AppData\Local\Programs\Python\Python38-32\;C:\Users\Usuario\AppData\Local\Microsoft\WindowsApps;C:\ProgramData\Usuario\GitHubDesktop\bin;C:\Users\Usuario\AppData\Local\atom\bin;C:\Users\Usuario\AppData\Local\GitHubDesktop\bin;C:\Users\Usuario\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Usuario\AppData\Local\Programs\Fiddler;C:\Users\Usuario\AppData\Roaming\npm;C:\Users\Usuario\AppData\Local\Yarn\bin
+  C:\Python38\Scripts\;C:\Python38\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Users\Usuario\AppData\Local\Microsoft\WindowsApps;C:\Users\Usuario\.dotnet\tools;C:\Users\Usuario\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Usuario\AppData\Local\GitHubDesktop\bin;C:\ProgramData\Usuario\GitHubDesktop\bin;C:\Users\Usuario\AppData\Roaming\npm;C:\Users\Usuario\AppData\Local\Yarn\bin
 
 Yarn version: 
-  1.22.4
+  1.22.5
 
 Node version: 
-  14.6.0
+  14.9.0
 
 Platform: 
   win32 x64
 
 Trace: 
+<<<<<<< HEAD
+  Error: https://registry.yarnpkg.com/core-js/-/core-js-2.6.11.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141376:19)
+=======
   Error: https://registry.yarnpkg.com/react-native-community: Not found
       at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66096:18)
       at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140748:22)
@@ -21,10 +29,15 @@ Trace:
       at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141720:10)
       at Request.emit (events.js:314:20)
       at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141642:12)
+>>>>>>> dfb7a14b5fc75807ee549255303027ed114cb72b
       at Object.onceWrapper (events.js:420:28)
-      at IncomingMessage.emit (events.js:326:22)
-      at endReadableNT (_stream_readable.js:1244:12)
-      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+      at ClientRequest.emit (events.js:314:20)
+      at TLSSocket.emitRequestTimeout (_http_client.js:769:9)
+      at Object.onceWrapper (events.js:420:28)
+      at TLSSocket.emit (events.js:326:22)
+      at TLSSocket.Socket._onTimeout (net.js:482:8)
+      at listOnTimeout (internal/timers.js:554:17)
+      at processTimers (internal/timers.js:497:7)
 
 npm manifest: 
   {
@@ -38,7 +51,10 @@ npm manifest:
     },
     "dependencies": {
       "@paraboly/react-native-card": "^0.3.0",
+<<<<<<< HEAD
+=======
       "@react-native-community/checkbox": "^0.5.3",
+>>>>>>> dfb7a14b5fc75807ee549255303027ed114cb72b
       "@react-native-community/masked-view": "^0.1.10",
       "@react-navigation/drawer": "^5.9.0",
       "@react-navigation/native": "~5.1.5",
@@ -49,7 +65,11 @@ npm manifest:
       "react-dom": "~16.11.0",
       "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
       "react-native-dynamic-vector-icons": "^1.0.0",
+<<<<<<< HEAD
+      "react-native-elements": "^2.2.1",
+=======
       "react-native-elements": "^2.3.2",
+>>>>>>> dfb7a14b5fc75807ee549255303027ed114cb72b
       "react-native-gesture-handler": "~1.6.0",
       "react-native-linear-gradient": "^2.5.6",
       "react-native-material-ripple": "^0.9.1",
@@ -58,9 +78,12 @@ npm manifest:
       "react-native-root-toast": "^3.2.1",
       "react-native-safe-area-context": "^3.1.6",
       "react-native-screens": "^2.10.1",
+<<<<<<< HEAD
+=======
       "react-native-super-grid": "^4.0.3",
       "react-native-svg": "^12.1.0",
       "react-native-svg-uri": "^1.2.3",
+>>>>>>> dfb7a14b5fc75807ee549255303027ed114cb72b
       "react-native-touchable-scale": "https://github.com/kohver/react-native-touchable-scale",
       "react-native-vector-icons": "^7.0.0",
       "react-native-web": "~0.11.7",
@@ -1206,11 +1229,14 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@paraboly/react-native-card/-/react-native-card-0.3.0.tgz#5fe4d9edcca466b1bc6a6b6d00ae971a838079b1"
     integrity sha512-2za28yAyU7xTro2LO3sU3HDveo+ElPEX7Ware9O8kHFJpucLTLgtuzzy16YS3ZBGssLxz8+RskHV1u/iLTCLlg==
   
+<<<<<<< HEAD
+=======
   "@react-native-community/checkbox@^0.5.3":
     version "0.5.3"
     resolved "https://registry.yarnpkg.com/@react-native-community/checkbox/-/checkbox-0.5.3.tgz#a8cb10007499b0f947015670cde997f47478ffed"
     integrity sha512-1qUqt+GzvQZ0S8DIbD1HKBETXcrR8E1P2/2kYHqBgrUgRCq0cHxIy78oMflxH1GbgZAWmH/mJAddpr5qYUbxbQ==
   
+>>>>>>> dfb7a14b5fc75807ee549255303027ed114cb72b
   "@react-native-community/cli-debugger-ui@^4.9.0":
     version "4.9.0"
     resolved "https://registry.yarnpkg.com/@react-native-community/cli-debugger-ui/-/cli-debugger-ui-4.9.0.tgz#4177764ba69243c97aa26829d59d9501acb2bd71"
@@ -4749,10 +4775,17 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/react-native-dynamic-vector-icons/-/react-native-dynamic-vector-icons-1.0.0.tgz#a7a5fe4c77f3fe4452b6e68e22a739f955238409"
     integrity sha512-XbQjbKmutTLX1t0WvFFkZFi5V2HPCZZLD3B6b5GgwIJdsq3oXvWMeUB+are/h5UtKJumkJFPm+hylOHB7bS02w==
   
+<<<<<<< HEAD
+  react-native-elements@^2.2.1:
+    version "2.2.1"
+    resolved "https://registry.yarnpkg.com/react-native-elements/-/react-native-elements-2.2.1.tgz#1d95aa7ee2020f72e0bc779d574fefcf072b7086"
+    integrity sha512-JhveP4ZQzZrMef9sBJfjfgfdbKafGnqZGosVr4hb3At8c1wJ3QFgOGUsKxhpjpF2wr/RgLbP2UV3rS1cD+t7IA==
+=======
   react-native-elements@^2.3.2:
     version "2.3.2"
     resolved "https://registry.yarnpkg.com/react-native-elements/-/react-native-elements-2.3.2.tgz#f6b974127a3484bb46ebd98fbc012fb2208decd7"
     integrity sha512-HygYYmq8JYjk/YYiUwr/64qT64H2xlPBz0JnkGTQwvnnyXZrfkHFopw8rLWCupv3iLLPDzVohvPs0Z5HLdonSQ==
+>>>>>>> dfb7a14b5fc75807ee549255303027ed114cb72b
     dependencies:
       "@types/react-native-vector-icons" "^6.4.5"
       color "^3.1.0"
@@ -4857,6 +4890,8 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/react-native-status-bar-height/-/react-native-status-bar-height-2.5.0.tgz#bc0fb85230603850aab9667ee8111a62954de90c"
     integrity sha512-sYBCPYA/NapBSHkdm/IVL4ID3LLlIuLqINi2FBDyMkc2BU9pfSGOtkz9yfxoK39mYJuTrlTOQ7mManARUsYDSA==
   
+<<<<<<< HEAD
+=======
   react-native-super-grid@^4.0.3:
     version "4.0.3"
     resolved "https://registry.yarnpkg.com/react-native-super-grid/-/react-native-super-grid-4.0.3.tgz#67ce71c241eb572a4ca92c4b667a053f3ec6a874"
@@ -4879,6 +4914,7 @@ Lockfile:
       css-select "^2.1.0"
       css-tree "^1.0.0-alpha.39"
   
+>>>>>>> dfb7a14b5fc75807ee549255303027ed114cb72b
   "react-native-touchable-scale@https://github.com/kohver/react-native-touchable-scale":
     version "2.1.1"
     resolved "https://github.com/kohver/react-native-touchable-scale#f93057e03abb41966dbe0a5ccbf82f7d9962927f"
