@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Image } from "react-native";
+import { Image, View, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Clinica_View from "./app/Componente/clinica_View";
@@ -7,7 +7,6 @@ import PeluqueriaEsteticaView from "./app/Componente/peluqueria_estetica";
 import ConsultaVeterinariaView from "./app/Componente/consulta_veterinaria";
 import ConsultaEspecialistaView from "./app/Componente/consulta_especialista";
 import Guarderia from "./app/Componente/guarderia";
-
 import Index from "./app/Componente/index";
 import Urgencias from "./app/Componente/urgencias";
 import AgendarView from "./app/Componente/agendar_generic_view";
@@ -25,7 +24,6 @@ function PeluqueriaEsteticaComponent({ navigation }) {
 function ConsultaVeterinariaComponent({ navigation }) {
   return <ConsultaVeterinariaView navigation={navigation} />;
 }
-
 function IndexComponent({ navigation }) {
   return <Index navigation={navigation} />;
 }
@@ -38,11 +36,9 @@ function UrgenciasComponent() {
 function AgendarComponent({ navigation }) {
   return <AgendarView navigation={navigation} />;
 }
-
 function AgregarMascota({ navigation }) {
   return <AgregarMascotaFormulario navigation={navigation} />;
 }
-
 function LogoCarrito() {
   return (
     <Image
@@ -51,7 +47,6 @@ function LogoCarrito() {
     />
   );
 }
-
 function Menu() {
   return (
     <Image
